@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'RYUtils' target in the 'RYUtils' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

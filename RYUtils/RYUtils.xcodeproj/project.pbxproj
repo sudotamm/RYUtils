@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		940F773517866D5700212A27 /* RYDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 940F773117866D5600212A27 /* RYDownloader.h */; };
+		940F773617866D5700212A27 /* RYDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F773217866D5600212A27 /* RYDownloader.m */; };
+		940F773717866D5700212A27 /* RYDownloaderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 940F773317866D5700212A27 /* RYDownloaderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		940F773817866D5700212A27 /* RYDownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F773417866D5700212A27 /* RYDownloaderManager.m */; };
+		940F773B17866D6000212A27 /* RYPullDownRefreshTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 940F773917866D6000212A27 /* RYPullDownRefreshTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		940F773C17866D6000212A27 /* RYPullDownRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F773A17866D6000212A27 /* RYPullDownRefreshTableView.m */; };
+		940F773F17866D6A00212A27 /* RYMediaPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 940F773D17866D6A00212A27 /* RYMediaPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		940F774017866D6A00212A27 /* RYMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F773E17866D6A00212A27 /* RYMediaPicker.m */; };
+		940F774317866D7400212A27 /* EGORefreshTableHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 940F774117866D7300212A27 /* EGORefreshTableHeaderView.h */; };
+		940F774417866D7400212A27 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F774217866D7300212A27 /* EGORefreshTableHeaderView.m */; };
+		94487345171C057E00EB3569 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94487343171C057E00EB3569 /* InfoPlist.strings */; };
+		9448735C171C05DE00EB3569 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448734E171C05DD00EB3569 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (); }; };
+		9448735D171C05DE00EB3569 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448734F171C05DD00EB3569 /* MBProgressHUD.m */; };
+		9448735E171C05DE00EB3569 /* NSDate+RYAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487350171C05DE00EB3569 /* NSDate+RYAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9448735F171C05DE00EB3569 /* NSDate+RYAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94487351171C05DE00EB3569 /* NSDate+RYAdditions.m */; };
+		94487360171C05DE00EB3569 /* UIView+RYUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487352171C05DE00EB3569 /* UIView+RYUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94487361171C05DE00EB3569 /* UIView+RYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 94487353171C05DE00EB3569 /* UIView+RYUtilities.m */; };
+		94487362171C05DE00EB3569 /* RYAsynImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487354171C05DE00EB3569 /* RYAsynImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94487363171C05DE00EB3569 /* RYAsynImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94487355171C05DE00EB3569 /* RYAsynImageView.m */; };
+		94487364171C05DE00EB3569 /* RYImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487356171C05DE00EB3569 /* RYImageDownloader.h */; settings = {ATTRIBUTES = (); }; };
+		94487365171C05DE00EB3569 /* RYImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 94487357171C05DE00EB3569 /* RYImageDownloader.m */; };
+		94487366171C05DE00EB3569 /* RYAppBackgroundConfiger.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487358171C05DE00EB3569 /* RYAppBackgroundConfiger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94487367171C05DE00EB3569 /* RYAppBackgroundConfiger.m in Sources */ = {isa = PBXBuildFile; fileRef = 94487359171C05DE00EB3569 /* RYAppBackgroundConfiger.m */; };
+		94487369171C063300EB3569 /* RYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487368171C063300EB3569 /* RYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944A84B11744C55C00D9DF9D /* RYHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 944A84AF1744C55C00D9DF9D /* RYHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944A84B01744C55C00D9DF9D /* RYHUDManager.m */; };
+		94722A14171D2C7C001E2681 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 94722A13171D2C7C001E2681 /* LoadableCategory.h */; settings = {ATTRIBUTES = (); }; };
+		94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94FA513717CC3FF40030C8C0 /* RYReverseLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FA513517CC3FF40030C8C0 /* RYReverseLocation.m */; };
+		94FA514017CC790B0030C8C0 /* NSString+RYMD5Addtion.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA513E17CC790B0030C8C0 /* NSString+RYMD5Addtion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94FA514117CC790B0030C8C0 /* NSString+RYMD5Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FA513F17CC790B0030C8C0 /* NSString+RYMD5Addtion.m */; };
+		94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94FA514517CC79390030C8C0 /* UIDevice+RYUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FA514317CC79390030C8C0 /* UIDevice+RYUDID.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		940F773117866D5600212A27 /* RYDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYDownloader.h; sourceTree = "<group>"; };
+		940F773217866D5600212A27 /* RYDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYDownloader.m; sourceTree = "<group>"; };
+		940F773317866D5700212A27 /* RYDownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYDownloaderManager.h; sourceTree = "<group>"; };
+		940F773417866D5700212A27 /* RYDownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYDownloaderManager.m; sourceTree = "<group>"; };
+		940F773917866D6000212A27 /* RYPullDownRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYPullDownRefreshTableView.h; sourceTree = "<group>"; };
+		940F773A17866D6000212A27 /* RYPullDownRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYPullDownRefreshTableView.m; sourceTree = "<group>"; };
+		940F773D17866D6A00212A27 /* RYMediaPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYMediaPicker.h; sourceTree = "<group>"; };
+		940F773E17866D6A00212A27 /* RYMediaPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYMediaPicker.m; sourceTree = "<group>"; };
+		940F774117866D7300212A27 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		940F774217866D7300212A27 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		9448733E171C057E00EB3569 /* RYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94487342171C057E00EB3569 /* RYUtils-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RYUtils-Info.plist"; sourceTree = "<group>"; };
+		94487344171C057E00EB3569 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94487346171C057E00EB3569 /* RYUtils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RYUtils-Prefix.pch"; sourceTree = "<group>"; };
+		9448734E171C05DD00EB3569 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		9448734F171C05DD00EB3569 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		94487350171C05DE00EB3569 /* NSDate+RYAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RYAdditions.h"; sourceTree = "<group>"; };
+		94487351171C05DE00EB3569 /* NSDate+RYAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RYAdditions.m"; sourceTree = "<group>"; };
+		94487352171C05DE00EB3569 /* UIView+RYUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RYUtilities.h"; sourceTree = "<group>"; };
+		94487353171C05DE00EB3569 /* UIView+RYUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RYUtilities.m"; sourceTree = "<group>"; };
+		94487354171C05DE00EB3569 /* RYAsynImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYAsynImageView.h; sourceTree = "<group>"; };
+		94487355171C05DE00EB3569 /* RYAsynImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYAsynImageView.m; sourceTree = "<group>"; };
+		94487356171C05DE00EB3569 /* RYImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYImageDownloader.h; sourceTree = "<group>"; };
+		94487357171C05DE00EB3569 /* RYImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYImageDownloader.m; sourceTree = "<group>"; };
+		94487358171C05DE00EB3569 /* RYAppBackgroundConfiger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYAppBackgroundConfiger.h; sourceTree = "<group>"; };
+		94487359171C05DE00EB3569 /* RYAppBackgroundConfiger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYAppBackgroundConfiger.m; sourceTree = "<group>"; };
+		94487368171C063300EB3569 /* RYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYUtils.h; sourceTree = SOURCE_ROOT; };
+		944A84AF1744C55C00D9DF9D /* RYHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYHUDManager.h; sourceTree = "<group>"; };
+		944A84B01744C55C00D9DF9D /* RYHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYHUDManager.m; sourceTree = "<group>"; };
+		94722A13171D2C7C001E2681 /* LoadableCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadableCategory.h; sourceTree = "<group>"; };
+		94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYReverseLocation.h; sourceTree = "<group>"; };
+		94FA513517CC3FF40030C8C0 /* RYReverseLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYReverseLocation.m; sourceTree = "<group>"; };
+		94FA513E17CC790B0030C8C0 /* NSString+RYMD5Addtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RYMD5Addtion.h"; sourceTree = "<group>"; };
+		94FA513F17CC790B0030C8C0 /* NSString+RYMD5Addtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RYMD5Addtion.m"; sourceTree = "<group>"; };
+		94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RYUDID.h"; sourceTree = "<group>"; };
+		94FA514317CC79390030C8C0 /* UIDevice+RYUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RYUDID.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94487338171C057E00EB3569 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94487331171C057E00EB3569 = {
+			isa = PBXGroup;
+			children = (
+				94487340171C057E00EB3569 /* RYUtils */,
+				9448733F171C057E00EB3569 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9448733F171C057E00EB3569 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9448733E171C057E00EB3569 /* RYUtils.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94487340171C057E00EB3569 /* RYUtils */ = {
+			isa = PBXGroup;
+			children = (
+				94487368171C063300EB3569 /* RYUtils.h */,
+				94722A13171D2C7C001E2681 /* LoadableCategory.h */,
+				940F773117866D5600212A27 /* RYDownloader.h */,
+				940F773217866D5600212A27 /* RYDownloader.m */,
+				940F773317866D5700212A27 /* RYDownloaderManager.h */,
+				940F773417866D5700212A27 /* RYDownloaderManager.m */,
+				940F773917866D6000212A27 /* RYPullDownRefreshTableView.h */,
+				940F773A17866D6000212A27 /* RYPullDownRefreshTableView.m */,
+				940F774117866D7300212A27 /* EGORefreshTableHeaderView.h */,
+				940F774217866D7300212A27 /* EGORefreshTableHeaderView.m */,
+				944A84AF1744C55C00D9DF9D /* RYHUDManager.h */,
+				944A84B01744C55C00D9DF9D /* RYHUDManager.m */,
+				9448734E171C05DD00EB3569 /* MBProgressHUD.h */,
+				9448734F171C05DD00EB3569 /* MBProgressHUD.m */,
+				94487354171C05DE00EB3569 /* RYAsynImageView.h */,
+				94487355171C05DE00EB3569 /* RYAsynImageView.m */,
+				94487356171C05DE00EB3569 /* RYImageDownloader.h */,
+				94487357171C05DE00EB3569 /* RYImageDownloader.m */,
+				94487358171C05DE00EB3569 /* RYAppBackgroundConfiger.h */,
+				94487359171C05DE00EB3569 /* RYAppBackgroundConfiger.m */,
+				940F773D17866D6A00212A27 /* RYMediaPicker.h */,
+				940F773E17866D6A00212A27 /* RYMediaPicker.m */,
+				94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */,
+				94FA513517CC3FF40030C8C0 /* RYReverseLocation.m */,
+				94487350171C05DE00EB3569 /* NSDate+RYAdditions.h */,
+				94487351171C05DE00EB3569 /* NSDate+RYAdditions.m */,
+				94487352171C05DE00EB3569 /* UIView+RYUtilities.h */,
+				94487353171C05DE00EB3569 /* UIView+RYUtilities.m */,
+				94FA513E17CC790B0030C8C0 /* NSString+RYMD5Addtion.h */,
+				94FA513F17CC790B0030C8C0 /* NSString+RYMD5Addtion.m */,
+				94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */,
+				94FA514317CC79390030C8C0 /* UIDevice+RYUDID.m */,
+				94487341171C057E00EB3569 /* Supporting Files */,
+			);
+			path = RYUtils;
+			sourceTree = "<group>";
+		};
+		94487341171C057E00EB3569 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94487342171C057E00EB3569 /* RYUtils-Info.plist */,
+				94487343171C057E00EB3569 /* InfoPlist.strings */,
+				94487346171C057E00EB3569 /* RYUtils-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		94487339171C057E00EB3569 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9448735E171C05DE00EB3569 /* NSDate+RYAdditions.h in Headers */,
+				94487360171C05DE00EB3569 /* UIView+RYUtilities.h in Headers */,
+				94487362171C05DE00EB3569 /* RYAsynImageView.h in Headers */,
+				94487366171C05DE00EB3569 /* RYAppBackgroundConfiger.h in Headers */,
+				940F773717866D5700212A27 /* RYDownloaderManager.h in Headers */,
+				940F773B17866D6000212A27 /* RYPullDownRefreshTableView.h in Headers */,
+				94487369171C063300EB3569 /* RYUtils.h in Headers */,
+				940F773F17866D6A00212A27 /* RYMediaPicker.h in Headers */,
+				94722A14171D2C7C001E2681 /* LoadableCategory.h in Headers */,
+				94FA514017CC790B0030C8C0 /* NSString+RYMD5Addtion.h in Headers */,
+				94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */,
+				94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */,
+				944A84B11744C55C00D9DF9D /* RYHUDManager.h in Headers */,
+				9448735C171C05DE00EB3569 /* MBProgressHUD.h in Headers */,
+				94487364171C05DE00EB3569 /* RYImageDownloader.h in Headers */,
+				940F773517866D5700212A27 /* RYDownloader.h in Headers */,
+				940F774317866D7400212A27 /* EGORefreshTableHeaderView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9448733D171C057E00EB3569 /* RYUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94487349171C057E00EB3569 /* Build configuration list for PBXNativeTarget "RYUtils" */;
+			buildPhases = (
+				94487336171C057E00EB3569 /* ShellScript */,
+				94487337171C057E00EB3569 /* Sources */,
+				94487338171C057E00EB3569 /* Frameworks */,
+				94487339171C057E00EB3569 /* Headers */,
+				9448733A171C057E00EB3569 /* Resources */,
+				9448733B171C057E00EB3569 /* ShellScript */,
+				9448733C171C057E00EB3569 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RYUtils;
+			productName = RYUtils;
+			productReference = 9448733E171C057E00EB3569 /* RYUtils.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94487332171C057E00EB3569 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Ryan;
+			};
+			buildConfigurationList = 94487335171C057E00EB3569 /* Build configuration list for PBXProject "RYUtils" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 94487331171C057E00EB3569;
+			productRefGroup = 9448733F171C057E00EB3569 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9448733D171C057E00EB3569 /* RYUtils */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9448733A171C057E00EB3569 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94487345171C057E00EB3569 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94487336171C057E00EB3569 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+		};
+		9448733B171C057E00EB3569 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		9448733C171C057E00EB3569 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh A \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94487337171C057E00EB3569 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9448735D171C05DE00EB3569 /* MBProgressHUD.m in Sources */,
+				9448735F171C05DE00EB3569 /* NSDate+RYAdditions.m in Sources */,
+				94487361171C05DE00EB3569 /* UIView+RYUtilities.m in Sources */,
+				94487363171C05DE00EB3569 /* RYAsynImageView.m in Sources */,
+				94487365171C05DE00EB3569 /* RYImageDownloader.m in Sources */,
+				94487367171C05DE00EB3569 /* RYAppBackgroundConfiger.m in Sources */,
+				944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */,
+				940F773617866D5700212A27 /* RYDownloader.m in Sources */,
+				940F773817866D5700212A27 /* RYDownloaderManager.m in Sources */,
+				940F773C17866D6000212A27 /* RYPullDownRefreshTableView.m in Sources */,
+				940F774017866D6A00212A27 /* RYMediaPicker.m in Sources */,
+				940F774417866D7400212A27 /* EGORefreshTableHeaderView.m in Sources */,
+				94FA513717CC3FF40030C8C0 /* RYReverseLocation.m in Sources */,
+				94FA514117CC790B0030C8C0 /* NSString+RYMD5Addtion.m in Sources */,
+				94FA514517CC79390030C8C0 /* UIDevice+RYUDID.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94487343171C057E00EB3569 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94487344171C057E00EB3569 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94487347171C057E00EB3569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		94487348171C057E00EB3569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9448734A171C057E00EB3569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RYUtils/RYUtils-Prefix.pch";
+				INFOPLIST_FILE = "RYUtils/RYUtils-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		9448734B171C057E00EB3569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RYUtils/RYUtils-Prefix.pch";
+				INFOPLIST_FILE = "RYUtils/RYUtils-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94487335171C057E00EB3569 /* Build configuration list for PBXProject "RYUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94487347171C057E00EB3569 /* Debug */,
+				94487348171C057E00EB3569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94487349171C057E00EB3569 /* Build configuration list for PBXNativeTarget "RYUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9448734A171C057E00EB3569 /* Debug */,
+				9448734B171C057E00EB3569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94487332171C057E00EB3569 /* Project object */;
+}
