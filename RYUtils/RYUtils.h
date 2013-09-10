@@ -25,6 +25,8 @@
  v1.4
     - 添加md5函数的category - NSString+RYMD5Addtion
     - 添加UDID获取category  - UIDevice+RYUDID
+ v1.5 
+    - 添加私有动画api注释到UIView+RYUtilities中
  */
 
 #ifndef RYUtils_RYUtils_h
