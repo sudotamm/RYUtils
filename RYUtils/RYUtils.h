@@ -27,6 +27,8 @@
     - 添加UDID获取category  - UIDevice+RYUDID
  v1.5 
     - 添加私有动画api注释到UIView+RYUtilities中
+ v1.6
+    - 添加Downloader类到RYUtils中，方便外部使用对应类的delegate
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -37,6 +39,7 @@
 #import "UIView+RYUtilities.h"
 #import "RYAsynImageView.h"
 #import "RYAppBackgroundConfiger.h"
+#import "RYDownloader.h"
 #import "RYDownloaderManager.h"
 #import "RYPullDownRefreshTableView.h"
 #import "RYMediaPicker.h"
