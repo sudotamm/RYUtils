@@ -29,6 +29,8 @@
     - 添加私有动画api注释到UIView+RYUtilities中
  v1.6
     - 添加Downloader类到RYUtils中，方便外部使用对应类的delegate
+ v1.7
+    - 修改RYPullDownRefreshTableView类，移除类中UITableViewDatasource @required method warnings
  */
 
 #ifndef RYUtils_RYUtils_h

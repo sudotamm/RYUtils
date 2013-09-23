@@ -19,7 +19,7 @@
 @class EGORefreshTableHeaderView;
 @protocol RYPullDownRefreshTableViewDelegate;
 
-@interface RYPullDownRefreshTableView : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface RYPullDownRefreshTableView : UIView<UITableViewDelegate>
 {
     BOOL _reloading;
 }
