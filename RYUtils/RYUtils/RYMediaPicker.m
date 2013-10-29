@@ -60,7 +60,7 @@
     self.fileLocation = nil;
     self.fileDate = nil;
     self.fileLocationName = nil;
-    [imagePickerController dismissModalViewControllerAnimated:YES];
+    [imagePickerController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - GetPictureFromDevice methods
@@ -83,21 +83,18 @@
 		self.imagePickerController.allowsEditing = self.mediaEditing;
         
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-            [(UIViewController *)self.parentController presentModalViewController:self.imagePickerController animated:YES];
+        {
+            [(UIViewController *)self.parentController presentViewController:self.imagePickerController animated:YES completion:nil];
+        }
         else {
             UIViewController *vc = (UIViewController *)self.parentController;
-            UIViewController *modalVC = nil;
-            if([vc respondsToSelector:@selector(presentedViewController)])
-            {
-                modalVC = [vc presentedViewController];
-            }
-            else {
-                modalVC = [vc modalViewController];
-            }
+            UIViewController *modalVC = [vc presentedViewController];
             if(nil == modalVC)
-                [vc presentModalViewController:self.imagePickerController animated:YES];
+            {
+                [vc presentViewController:self.imagePickerController animated:YES completion:nil];
+            }
             else {
-                [modalVC presentModalViewController:self.imagePickerController animated:YES];
+                [modalVC presentViewController:self.imagePickerController animated:YES completion:nil];
             }
         }
 	}
@@ -127,7 +124,7 @@
             return self.imagePickerController;
         }
         else {
-            [(UIViewController *)self.parentController presentModalViewController:self.imagePickerController animated:YES];
+            [(UIViewController *)self.parentController presentViewController:self.imagePickerController animated:YES completion:nil];
             self.imagePickerController.navigationBar.barStyle = UIBarStyleBlack;
             [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
         }
@@ -239,7 +236,7 @@
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-	[picker dismissModalViewControllerAnimated:YES];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - CLLocationManagerDelegate methods

@@ -31,6 +31,8 @@
     - 添加Downloader类到RYUtils中，方便外部使用对应类的delegate
  v1.7
     - 修改RYPullDownRefreshTableView类，移除类中UITableViewDatasource @required method warnings
+ v1.8
+    - 框架支持最低修改至6.0，移除对应过期方法使用的warning
  */
 
 #ifndef RYUtils_RYUtils_h
