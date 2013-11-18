@@ -76,15 +76,16 @@
 - (void)showMixedWithLoading:(NSString *)message end:(NSString *)endMessage
 {
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
+    hud.userInteractionEnabled = YES;
     hud.mode = MBProgressHUDModeDeterminate;
     hud.labelText = message;
     [NSObject cancelPreviousPerformRequestsWithTarget:hud];
-    [hud showWhileExecuting:@selector(myProgressTask) onTarget:self withObject:nil animated:YES];
+    [hud showWhileExecuting:@selector(myProgressTask:) onTarget:self withObject:endMessage animated:YES];
 }
 
 #pragma mark - Private methods
 
-- (void)myProgressTask {
+- (void)myProgressTask:(NSString *)endMessage {
     // This just increases the progress indicator in a loop
     float progress = 0.0f;
     while (progress < 1.0f) {
@@ -93,6 +94,7 @@
         usleep(10000);
     }
     hud.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]] autorelease];
+    hud.labelText = endMessage;
     hud.mode = MBProgressHUDModeCustomView;
     usleep(500000);
 }

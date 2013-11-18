@@ -33,6 +33,8 @@
     - 修改RYPullDownRefreshTableView类，移除类中UITableViewDatasource @required method warnings
  v1.8 2013-10-29 Ryan
     - 框架支持最低修改至6.0，移除对应过期方法使用的warning
+ v1.8.1 2013-11-18 Ryan
+    - 修改RYHUDManager进度加载占位显示方法
  */
 
 #ifndef RYUtils_RYUtils_h
