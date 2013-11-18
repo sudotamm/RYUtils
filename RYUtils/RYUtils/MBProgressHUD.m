@@ -77,7 +77,12 @@
 
 - (void)setMode:(MBProgressHUDMode)newMode {
     // Dont change mode if it wasn't actually changed to prevent flickering
-    if (mode && (mode == newMode)) {
+    
+    /*Ryan - 2013/11/18
+     - 自定义模式下每次都需要重新加载indicator，以适应自定义模式切换不同customView
+     - 其他模式不需要每次重新加载
+     */
+    if ((newMode != MBProgressHUDModeCustomView) && (mode == newMode)) {
         return;
     }
 	
@@ -575,14 +580,15 @@
 - (void)cleanUp {
 	taskInProgress = NO;
 	
-	self.indicator = nil;
+    //Ryan - 当异步线程加载完之后清理内存时不用释放indicator
+    //	self.indicator = nil;
 	
 #if !__has_feature(objc_arc)
     [targetForExecution release];
     [objectForExecution release];
 #endif
-	
-    [self hide:useAnimation];
+	[self hide:useAnimation afterDelay:1.f];
+    //    [self hide:useAnimation];
 }
 
 #pragma mark -

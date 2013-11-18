@@ -35,6 +35,8 @@
     - 框架支持最低修改至6.0，移除对应过期方法使用的warning
  v1.8.1 2013-11-18 Ryan
     - 修改RYHUDManager进度加载占位显示方法
+ v1.8.2 2013-11-18 Ryan
+    - 修改RYHUDManager在custom模式下即时更新customView
  */
 
 #ifndef RYUtils_RYUtils_h

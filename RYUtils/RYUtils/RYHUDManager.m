@@ -94,8 +94,7 @@
         usleep(10000);
     }
     hud.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]] autorelease];
-    hud.labelText = endMessage;
     hud.mode = MBProgressHUDModeCustomView;
-    usleep(500000);
+    hud.labelText = endMessage;
 }
 @end
