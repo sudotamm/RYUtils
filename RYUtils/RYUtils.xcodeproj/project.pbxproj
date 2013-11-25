@@ -17,6 +17,12 @@
 		940F774017866D6A00212A27 /* RYMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F773E17866D6A00212A27 /* RYMediaPicker.m */; };
 		940F774317866D7400212A27 /* EGORefreshTableHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 940F774117866D7300212A27 /* EGORefreshTableHeaderView.h */; };
 		940F774417866D7400212A27 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 940F774217866D7300212A27 /* EGORefreshTableHeaderView.m */; };
+		9438D1DE1843232F00B3BC61 /* UIImage+RYScreenShot.h in Headers */ = {isa = PBXBuildFile; fileRef = 9438D1DA1843232F00B3BC61 /* UIImage+RYScreenShot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9438D1DF1843233000B3BC61 /* UIImage+RYScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9438D1DB1843232F00B3BC61 /* UIImage+RYScreenShot.m */; };
+		9438D1E01843233000B3BC61 /* UIImage+RYBlurGlass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9438D1DC1843232F00B3BC61 /* UIImage+RYBlurGlass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9438D1E11843233000B3BC61 /* UIImage+RYBlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */; };
+		9438D1E4184323A500B3BC61 /* NSArray+RYLocationTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 9438D1E2184323A500B3BC61 /* NSArray+RYLocationTransform.h */; };
+		9438D1E5184323A500B3BC61 /* NSArray+RYLocationTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9438D1E3184323A500B3BC61 /* NSArray+RYLocationTransform.m */; };
 		94487345171C057E00EB3569 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94487343171C057E00EB3569 /* InfoPlist.strings */; };
 		9448735C171C05DE00EB3569 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448734E171C05DD00EB3569 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (); }; };
 		9448735D171C05DE00EB3569 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448734F171C05DD00EB3569 /* MBProgressHUD.m */; };
@@ -53,6 +59,12 @@
 		940F773E17866D6A00212A27 /* RYMediaPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYMediaPicker.m; sourceTree = "<group>"; };
 		940F774117866D7300212A27 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		940F774217866D7300212A27 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		9438D1DA1843232F00B3BC61 /* UIImage+RYScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RYScreenShot.h"; sourceTree = "<group>"; };
+		9438D1DB1843232F00B3BC61 /* UIImage+RYScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYScreenShot.m"; sourceTree = "<group>"; };
+		9438D1DC1843232F00B3BC61 /* UIImage+RYBlurGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RYBlurGlass.h"; sourceTree = "<group>"; };
+		9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYBlurGlass.m"; sourceTree = "<group>"; };
+		9438D1E2184323A500B3BC61 /* NSArray+RYLocationTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RYLocationTransform.h"; sourceTree = "<group>"; };
+		9438D1E3184323A500B3BC61 /* NSArray+RYLocationTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RYLocationTransform.m"; sourceTree = "<group>"; };
 		9448733E171C057E00EB3569 /* RYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94487342171C057E00EB3569 /* RYUtils-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RYUtils-Info.plist"; sourceTree = "<group>"; };
 		94487344171C057E00EB3569 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -143,6 +155,12 @@
 				94FA513F17CC790B0030C8C0 /* NSString+RYMD5Addtion.m */,
 				94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */,
 				94FA514317CC79390030C8C0 /* UIDevice+RYUDID.m */,
+				9438D1DA1843232F00B3BC61 /* UIImage+RYScreenShot.h */,
+				9438D1DB1843232F00B3BC61 /* UIImage+RYScreenShot.m */,
+				9438D1DC1843232F00B3BC61 /* UIImage+RYBlurGlass.h */,
+				9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */,
+				9438D1E2184323A500B3BC61 /* NSArray+RYLocationTransform.h */,
+				9438D1E3184323A500B3BC61 /* NSArray+RYLocationTransform.m */,
 				94487341171C057E00EB3569 /* Supporting Files */,
 			);
 			path = RYUtils;
@@ -170,15 +188,18 @@
 				94487362171C05DE00EB3569 /* RYAsynImageView.h in Headers */,
 				94487366171C05DE00EB3569 /* RYAppBackgroundConfiger.h in Headers */,
 				940F773717866D5700212A27 /* RYDownloaderManager.h in Headers */,
+				9438D1DE1843232F00B3BC61 /* UIImage+RYScreenShot.h in Headers */,
 				940F773B17866D6000212A27 /* RYPullDownRefreshTableView.h in Headers */,
 				94487369171C063300EB3569 /* RYUtils.h in Headers */,
 				940F773F17866D6A00212A27 /* RYMediaPicker.h in Headers */,
 				94722A14171D2C7C001E2681 /* LoadableCategory.h in Headers */,
+				9438D1E01843233000B3BC61 /* UIImage+RYBlurGlass.h in Headers */,
 				94FA514017CC790B0030C8C0 /* NSString+RYMD5Addtion.h in Headers */,
 				94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */,
 				94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */,
 				944A84B11744C55C00D9DF9D /* RYHUDManager.h in Headers */,
 				9448735C171C05DE00EB3569 /* MBProgressHUD.h in Headers */,
+				9438D1E4184323A500B3BC61 /* NSArray+RYLocationTransform.h in Headers */,
 				94487364171C05DE00EB3569 /* RYImageDownloader.h in Headers */,
 				940F773517866D5700212A27 /* RYDownloader.h in Headers */,
 				940F774317866D7400212A27 /* EGORefreshTableHeaderView.h in Headers */,
@@ -299,6 +320,8 @@
 				94487363171C05DE00EB3569 /* RYAsynImageView.m in Sources */,
 				94487365171C05DE00EB3569 /* RYImageDownloader.m in Sources */,
 				94487367171C05DE00EB3569 /* RYAppBackgroundConfiger.m in Sources */,
+				9438D1E11843233000B3BC61 /* UIImage+RYBlurGlass.m in Sources */,
+				9438D1DF1843233000B3BC61 /* UIImage+RYScreenShot.m in Sources */,
 				944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */,
 				940F773617866D5700212A27 /* RYDownloader.m in Sources */,
 				940F773817866D5700212A27 /* RYDownloaderManager.m in Sources */,
@@ -308,6 +331,7 @@
 				94FA513717CC3FF40030C8C0 /* RYReverseLocation.m in Sources */,
 				94FA514117CC790B0030C8C0 /* NSString+RYMD5Addtion.m in Sources */,
 				94FA514517CC79390030C8C0 /* UIDevice+RYUDID.m in Sources */,
+				9438D1E5184323A500B3BC61 /* NSArray+RYLocationTransform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

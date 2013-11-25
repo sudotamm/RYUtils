@@ -37,6 +37,10 @@
     - 修改RYHUDManager进度加载占位显示方法
  v1.8.2 2013-11-18 Ryan
     - 修改RYHUDManager在custom模式下即时更新customView
+ v1.9 2013-11-25
+    - 添加截图函数的category - UIImage+RYScreenShot
+    - 添加模糊函数的category - UIImage+RYBlurGlass
+    - 添加经纬度转换的category - NSArray+RYLocationTransform
  */
 
 #ifndef RYUtils_RYUtils_h
