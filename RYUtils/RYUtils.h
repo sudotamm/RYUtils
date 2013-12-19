@@ -42,6 +42,10 @@
     - 添加截图函数的category - UIImage+RYScreenShot
     - 添加模糊函数的category - UIImage+RYBlurGlass
     - 添加经纬度转换的category - NSArray+RYLocationTransform
+ v2.0 2013-12-19
+    - 添加xml解析成NSDictionary的通用类 - RYXMLReader
+    - 添加首尾滚动加载头条控件           - RYCycleScrollView
+    - 添加通用方法存储类                - RYCommonMethods
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -59,5 +63,8 @@
 #import "RYReverseLocation.h"
 #import "NSString+RYMD5Addtion.h"
 #import "UIDevice+RYUDID.h" 
+#import "RYXMLReader.h"
+#import "RYCommonMethods.h"
+#import "RYCycleScrollView.h"
 
 #endif
