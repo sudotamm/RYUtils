@@ -12,6 +12,7 @@
     RYMediaPicker      - AssetsLibrary.framework
     RYMediaPicker      - CoreLocation.framework
     UIDevice+RYUDID    - AdSupport.framework
+    UIImage+RYBlurGlass   - Accelerate.framework
  版本管理：
  v1.0 
     - 添加基本常用库
