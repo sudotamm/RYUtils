@@ -46,6 +46,8 @@
     - 添加xml解析成NSDictionary的通用类 - RYXMLReader
     - 添加首尾滚动加载头条控件           - RYCycleScrollView
     - 添加通用方法存储类                - RYCommonMethods
+ v2.1 2013-12-20
+    - 加入遗漏的头文件引用
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -63,6 +65,9 @@
 #import "RYReverseLocation.h"
 #import "NSString+RYMD5Addtion.h"
 #import "UIDevice+RYUDID.h" 
+#import "NSArray+RYLocationTransform.h"
+#import "UIImage+RYBlurGlass.h"
+#import "UIImage+RYScreenShot.h"
 #import "RYXMLReader.h"
 #import "RYCommonMethods.h"
 #import "RYCycleScrollView.h"
