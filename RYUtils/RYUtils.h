@@ -48,6 +48,8 @@
     - 添加通用方法存储类                - RYCommonMethods
  v2.1 2013-12-20
     - 加入遗漏的头文件引用
+ v2.2 2013-12-24
+    - RYXMLReader memory leak fix.
  */
 
 #ifndef RYUtils_RYUtils_h
