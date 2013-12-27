@@ -98,4 +98,22 @@
                               purpose:(NSString *)purpose;
 
 
+/**
+ put上传文件
+ @param urlStr 请求地址
+ @param params 请求参数
+ @param contentType 请求content-Type,如text/plain%%image/jpeg%%audio/aac
+ @param data 上传二进制流文件
+ @param fileName 上传文件名
+ @param receiver 接受callback的对象
+ @param purpose downloader的purpose
+ */
+- (void)uploadFileByPutWithURLString:(NSString *)urlStr
+                           putParams:(NSMutableDictionary *)params
+                         contentType:(NSString *)contentType
+                            fileData:(NSData *)data
+                            fileName:(NSString *)fileName
+                            delegate:(id)receiver
+                             purpose:(NSString *)purpose;
+
 @end

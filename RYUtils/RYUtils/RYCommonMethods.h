@@ -25,5 +25,17 @@
  */
 + (CGFloat)measureHeightOfUITextView:(UITextView *)textView;
 
+/**
+ 获取唯一识别字符串
+ @returns 唯一识别字符串
+ */
++ (NSString *)generateUniqueString;
+
+/**
+ 返回base64字符串
+ @param imgData 需要base64加密的数据，字符串可以先转data
+ @returns base64加密后的字符串
+ */
++ (NSString *) base64EncodingWithLineLength:(unsigned int) lineLength data:(NSData *)imgData;
 
 @end

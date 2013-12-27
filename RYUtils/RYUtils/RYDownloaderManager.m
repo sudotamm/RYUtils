@@ -180,6 +180,13 @@
 }
 
 #pragma mark Call server methods
+- (void)requestDataByGetWithURLString:(NSString *)urlStr
+                             delegate:(id<RYDownloaderDelegate>)receiver
+                              purpose:(NSString *)purpose
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:30.f];
+    [self requestDataWithURLRequest:request delegate:receiver purpose:purpose];
+}
 
 - (void)requestDataByPostWithURLString:(NSString *)urlStr
                             postParams:(NSMutableDictionary *)params
@@ -278,11 +285,27 @@
     [self requestDataWithURLRequest:request delegate:receiver purpose:purpose];
 }
 
-- (void)requestDataByGetWithURLString:(NSString *)urlStr
-                             delegate:(id<RYDownloaderDelegate>)receiver
-                              purpose:(NSString *)purpose
+- (void)uploadFileByPutWithURLString:(NSString *)urlStr
+                           putParams:(NSMutableDictionary *)params
+                         contentType:(NSString *)contentType
+                            fileData:(NSData *)data
+                            fileName:(NSString *)fileName
+                            delegate:(id<RYDownloaderDelegate>)receiver
+                             purpose:(NSString *)purpose
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:30.f];
+	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                       timeoutInterval:30.f];
+    [request setHTTPMethod:@"PUT"];
+    [request setValue:contentType forHTTPHeaderField:@"Content-Type"];
+    for(NSString *key in [params allKeys])
+    {
+        NSString *value = [params objectForKey:key];
+        [request setValue:value forKey:key];
+    }
+	[request setValue:[NSString stringWithFormat:@"%llu", (unsigned long long)[data length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBodyStream:[NSInputStream inputStreamWithData:data]];
+    
     [self requestDataWithURLRequest:request delegate:receiver purpose:purpose];
 }
 

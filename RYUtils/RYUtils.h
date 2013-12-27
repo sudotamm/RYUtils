@@ -50,6 +50,9 @@
     - 加入遗漏的头文件引用
  v2.2 2013-12-24
     - RYXMLReader memory leak fix.
+ v3.0 2013-12-27
+    - RYDownloaderManager加入put上传文件方式
+    - RYCommonMethods加入唯一识别码和base64加密方法
  */
 
 #ifndef RYUtils_RYUtils_h
