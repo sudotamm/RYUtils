@@ -301,7 +301,7 @@
     for(NSString *key in [params allKeys])
     {
         NSString *value = [params objectForKey:key];
-        [request setValue:value forKey:key];
+        [request setValue:value forHTTPHeaderField:key];
     }
 	[request setValue:[NSString stringWithFormat:@"%llu", (unsigned long long)[data length]] forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBodyStream:[NSInputStream inputStreamWithData:data]];
