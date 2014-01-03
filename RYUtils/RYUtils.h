@@ -53,6 +53,8 @@
  v3.0 2013-12-27
     - RYDownloaderManager加入put上传文件方式
     - RYCommonMethods加入唯一识别码和base64加密方法
+ v3.1 2013-1-3
+    - RYDownloader加入responseCode/100 != 2则转入error处理
  */
 
 #ifndef RYUtils_RYUtils_h
