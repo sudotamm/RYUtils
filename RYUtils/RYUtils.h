@@ -55,6 +55,8 @@
     - RYCommonMethods加入唯一识别码和base64加密方法
  v3.1 2013-1-3
     - RYDownloader加入responseCode/100 != 2则转入error处理
+ v3.2 2013-1-15
+    - UIDevice-RYUDID加入advertisingTrackingEnabled判断
  */
 
 #ifndef RYUtils_RYUtils_h

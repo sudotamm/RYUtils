@@ -79,7 +79,10 @@
     NSString *uniqueIdentifier = @"";
     if([[self systemVersion] floatValue] >= 6.0)
     {
-        uniqueIdentifier = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
+        if([ASIdentifierManager sharedManager].advertisingTrackingEnabled)
+            uniqueIdentifier = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
+        else
+            uniqueIdentifier = @"";
     }
     else
     {
