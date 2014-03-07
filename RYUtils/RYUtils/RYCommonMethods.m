@@ -47,6 +47,7 @@
         [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
         
         NSDictionary *attributes = @{ NSFontAttributeName: textView.font, NSParagraphStyleAttributeName : paragraphStyle };
+        [paragraphStyle release];
         
         CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(CGRectGetWidth(frame), MAXFLOAT)
                                                   options:NSStringDrawingUsesLineFragmentOrigin

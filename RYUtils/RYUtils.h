@@ -53,10 +53,12 @@
  v3.0 2013-12-27
     - RYDownloaderManager加入put上传文件方式
     - RYCommonMethods加入唯一识别码和base64加密方法
- v3.1 2013-1-3
+ v3.1 2014-1-3
     - RYDownloader加入responseCode/100 != 2则转入error处理
- v3.2 2013-1-15
+ v3.2 2014-1-15
     - UIDevice-RYUDID加入advertisingTrackingEnabled判断
+ v3.3 2014-3-7
+    - RYCommonMethods memory leak 处理
  */
 
 #ifndef RYUtils_RYUtils_h
