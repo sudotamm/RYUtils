@@ -100,6 +100,12 @@
 
 - (void)aysnLoadImageWithUrl:(NSString *)url placeHolder:(NSString *)placeHolder
 {
+    if(nil != aysnLoader_)
+    {
+        [aysnLoader_ cancelDownload];
+        aysnLoader_.delegate = nil;
+        aysnLoader_ = nil;
+    }
     self.placeholderName = placeHolder;
     if(nil == url || [url isEqualToString:@""])
     {
@@ -141,12 +147,6 @@
         }
         else
             NSAssert(0, @"%@ not existed.", placeHolder);
-        if(nil != aysnLoader_)
-        {
-            [aysnLoader_ cancelDownload];
-            aysnLoader_.delegate = nil;
-            aysnLoader_ = nil;
-        }
         RYImageDownloader *d = [[RYImageDownloader alloc] init];
         d.purpose = imagePath;
         d.delegate = self;

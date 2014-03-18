@@ -59,6 +59,8 @@
     - UIDevice-RYUDID加入advertisingTrackingEnabled判断
  v3.3 2014-3-7
     - RYCommonMethods memory leak 处理
+ v3.3.1 2014-3-18
+    - RYAsynImageView: 修复reuse时如果本地图片已经存在没有取消之前回调的bug
  */
 
 #ifndef RYUtils_RYUtils_h
