@@ -7,9 +7,6 @@
 //
 
 #import "UIView+RYUtilities.h"
-#import "LoadableCategory.h"
-
-MAKE_CATEGORIES_LOADABLE(UIView_RYUtilities);
 
 @implementation UIView (RYUtilities)
 

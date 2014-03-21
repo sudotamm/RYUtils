@@ -63,6 +63,9 @@
     - RYAsynImageView: 修复reuse时如果本地图片已经存在没有取消之前回调的bug
  v3.3.2 2014-3-21
     - RYAsynImageView: 修复reuser时resize的frame不是基于初始frame的bug
+ v3.4 2014-3-21
+    - 移除旧版fake framework脚本
+    - iOS-Universal-Framework制作地址：https://github.com/pub-burrito/iOS-Universal-Framework
  */
 
 #ifndef RYUtils_RYUtils_h

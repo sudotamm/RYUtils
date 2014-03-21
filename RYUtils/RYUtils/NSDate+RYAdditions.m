@@ -8,9 +8,6 @@
 
 #import "NSDate+RYAdditions.h"
 
-#import "LoadableCategory.h"
-MAKE_CATEGORIES_LOADABLE(NSDate_RYAdditions);
-
 @implementation NSDate(RYAdditions)
 // convert string to date by given format
 + (NSDate *)dateFromStringByFormat:(NSString *)format string:(NSString *)string
