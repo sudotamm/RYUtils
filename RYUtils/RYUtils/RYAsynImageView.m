@@ -23,6 +23,24 @@
 @synthesize aysnLoader = aysnLoader_;
 @synthesize placeholderName,cacheDir;
 @synthesize forYulong;
+@synthesize originalFrame;
+
+#pragma mark - UIView methods
+- (id)initWithFrame:(CGRect)frame
+{
+    if(self = [super initWithFrame:frame])
+    {
+        self.originalFrame = frame;
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.originalFrame = self.frame;
+}
+
 
 - (void)dealloc
 {
@@ -34,6 +52,8 @@
     aysnLoader_ = nil;
     [super dealloc];
 }
+
+#pragma mark - Private methods
 
 - (BOOL)isImageExistWithName:(NSString *)imageName
 {
@@ -51,12 +71,16 @@
 
 - (void)resizeSelfWithImage:(UIImage *)img
 {
+    if(CGRectEqualToRect(self.originalFrame, CGRectZero))
+    {
+        NSAssert(0, @"设置resize的RYAsynImageView的frame不可以为zero");
+    }
 	// the downloaded local cached article image.
 	UIImage *tmpImage = img;
 	
 	// Adjust the image frame
-	CGFloat picWidth = self.frame.size.width;
-	CGFloat picHeight = self.frame.size.height;
+	CGFloat picWidth = self.originalFrame.size.width;
+	CGFloat picHeight = self.originalFrame.size.height;
     
     CGFloat actWidth = tmpImage.size.width;
     CGFloat actHeight = tmpImage.size.height;
@@ -89,14 +113,15 @@
             actHeight = picHeight;
 		}
 	}
-    CGRect rect = self.frame;
+    CGRect rect = self.originalFrame;
     rect.origin.x = rect.origin.x+(picWidth-actWidth)/2;
     rect.origin.y = rect.origin.y+(picHeight-actHeight)/2;
     rect.size.height = actHeight;
     rect.size.width = actWidth;
-    
     self.frame = rect;
 }
+
+#pragma mark - Public methods
 
 - (void)aysnLoadImageWithUrl:(NSString *)url placeHolder:(NSString *)placeHolder
 {
@@ -159,8 +184,8 @@
         [d release];
     }
 }
-#pragma -
-#pragma RYImageDownloaderDelegate methods
+
+#pragma mark - RYImageDownloaderDelegate methods
 - (void)downloader:(RYImageDownloader*)downloader completeWithNSData:(NSData*)data
 {
     UIImage *img = [UIImage imageWithData:data];

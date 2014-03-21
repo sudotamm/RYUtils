@@ -61,6 +61,8 @@
     - RYCommonMethods memory leak 处理
  v3.3.1 2014-3-18
     - RYAsynImageView: 修复reuse时如果本地图片已经存在没有取消之前回调的bug
+ v3.3.2 2014-3-21
+    - RYAsynImageView: 修复reuser时resize的frame不是基于初始frame的bug
  */
 
 #ifndef RYUtils_RYUtils_h
