@@ -66,6 +66,8 @@
  v3.4 2014-3-21
     - 移除旧版fake framework脚本
     - iOS-Universal-Framework制作地址：https://github.com/pub-burrito/iOS-Universal-Framework
+ v3.5 2014-3-27
+    - 添加UIImage+RYUtilities方法
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -89,5 +91,6 @@
 #import "RYXMLReader.h"
 #import "RYCommonMethods.h"
 #import "RYCycleScrollView.h"
+#import "UIImage+RYUtilities.h"
 
 #endif
