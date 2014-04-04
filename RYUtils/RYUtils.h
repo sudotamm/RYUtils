@@ -68,6 +68,9 @@
     - iOS-Universal-Framework制作地址：https://github.com/pub-burrito/iOS-Universal-Framework
  v3.5 2014-3-27
     - 添加UIImage+RYUtilities方法
+ v3.6 2014-4-4
+    - RYRootBlurViewManager类添加
+    - NSDate+RYAdditions添加时间线获取方法
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -92,5 +95,6 @@
 #import "RYCommonMethods.h"
 #import "RYCycleScrollView.h"
 #import "UIImage+RYUtilities.h"
+#import "RYRootBlurViewManager.h"
 
 #endif

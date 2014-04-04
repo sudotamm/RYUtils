@@ -26,12 +26,19 @@
  */
 + (NSString *)dateToStringByFormat:(NSString *)format date:(NSDate *)date;
 
-
 /**
 	获取指定日期的weekday
 	@param date 指定日期
 	@returns weekday字符串，如："星期一"
  */
 + (NSString *)weekdataForDate:(NSDate *)date;
+
+
+/**
+    获取指定日期相对于现在的时间线
+    @param date 指定日期
+    @returns 时间线字符串，如："1天前"
+ */
++ (NSString *)timelineForDate:(NSDate *)date;
 
 @end

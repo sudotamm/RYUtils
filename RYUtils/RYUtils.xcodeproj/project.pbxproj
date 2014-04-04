@@ -45,6 +45,8 @@
 		94487369171C063300EB3569 /* RYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487368171C063300EB3569 /* RYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		944A84B11744C55C00D9DF9D /* RYHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 944A84AF1744C55C00D9DF9D /* RYHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944A84B01744C55C00D9DF9D /* RYHUDManager.m */; };
+		944DBF9318EE9B7100FD5906 /* RYRootBlurViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944DBF9418EE9B7100FD5906 /* RYRootBlurViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */; };
 		94E8811B18E40222003EB0C2 /* UIImage+RYUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94E8811C18E40222003EB0C2 /* UIImage+RYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */; };
 		94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -97,6 +99,8 @@
 		94487368171C063300EB3569 /* RYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYUtils.h; sourceTree = SOURCE_ROOT; };
 		944A84AF1744C55C00D9DF9D /* RYHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYHUDManager.h; sourceTree = "<group>"; };
 		944A84B01744C55C00D9DF9D /* RYHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYHUDManager.m; sourceTree = "<group>"; };
+		944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYRootBlurViewManager.h; sourceTree = "<group>"; };
+		944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYRootBlurViewManager.m; sourceTree = "<group>"; };
 		94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RYUtilities.h"; sourceTree = "<group>"; };
 		94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYUtilities.m"; sourceTree = "<group>"; };
 		94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYReverseLocation.h; sourceTree = "<group>"; };
@@ -168,10 +172,6 @@
 				94FA513F17CC790B0030C8C0 /* NSString+RYMD5Addtion.m */,
 				94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */,
 				94FA514317CC79390030C8C0 /* UIDevice+RYUDID.m */,
-				9438D1DA1843232F00B3BC61 /* UIImage+RYScreenShot.h */,
-				9438D1DB1843232F00B3BC61 /* UIImage+RYScreenShot.m */,
-				9438D1DC1843232F00B3BC61 /* UIImage+RYBlurGlass.h */,
-				9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */,
 				9438D1E2184323A500B3BC61 /* NSArray+RYLocationTransform.h */,
 				9438D1E3184323A500B3BC61 /* NSArray+RYLocationTransform.m */,
 				94452F221862CE6A00EEB6D5 /* RYXMLReader.h */,
@@ -182,6 +182,12 @@
 				94452F2B1862CE8800EEB6D5 /* RYCycleScrollView.m */,
 				94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */,
 				94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */,
+				9438D1DA1843232F00B3BC61 /* UIImage+RYScreenShot.h */,
+				9438D1DB1843232F00B3BC61 /* UIImage+RYScreenShot.m */,
+				9438D1DC1843232F00B3BC61 /* UIImage+RYBlurGlass.h */,
+				9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */,
+				944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */,
+				944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */,
 				94487341171C057E00EB3569 /* Supporting Files */,
 			);
 			path = RYUtils;
@@ -214,6 +220,7 @@
 				940F773B17866D6000212A27 /* RYPullDownRefreshTableView.h in Headers */,
 				94487369171C063300EB3569 /* RYUtils.h in Headers */,
 				940F773F17866D6A00212A27 /* RYMediaPicker.h in Headers */,
+				944DBF9318EE9B7100FD5906 /* RYRootBlurViewManager.h in Headers */,
 				9438D1E01843233000B3BC61 /* UIImage+RYBlurGlass.h in Headers */,
 				94FA514017CC790B0030C8C0 /* NSString+RYMD5Addtion.h in Headers */,
 				94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */,
@@ -300,6 +307,7 @@
 				94487363171C05DE00EB3569 /* RYAsynImageView.m in Sources */,
 				94487365171C05DE00EB3569 /* RYImageDownloader.m in Sources */,
 				94487367171C05DE00EB3569 /* RYAppBackgroundConfiger.m in Sources */,
+				944DBF9418EE9B7100FD5906 /* RYRootBlurViewManager.m in Sources */,
 				9438D1E11843233000B3BC61 /* UIImage+RYBlurGlass.m in Sources */,
 				9438D1DF1843233000B3BC61 /* UIImage+RYScreenShot.m in Sources */,
 				944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */,

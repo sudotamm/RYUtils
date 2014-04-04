@@ -62,4 +62,36 @@
     }
     return @"";
 }
+//获取date相对于现在的时间线
++ (NSString *)timelineForDate:(NSDate *)date
+{
+    NSString *timeString = @"";
+    
+    NSInteger distance = (NSInteger)[[NSDate date] timeIntervalSinceDate:date];
+    if (distance <= 0)
+        timeString = @"现在";
+    else if (distance < 60) {
+        timeString = [NSString stringWithFormat:@"%d%@", distance, @"秒前"];
+    }
+    else if (distance < 60 * 60) {
+        distance = distance / 60;
+        timeString = [NSString stringWithFormat:@"%d%@", distance, @"分钟前"];
+    }
+    else if (distance < 60 * 60 * 24) {
+        distance = distance / 60 / 60;
+        timeString = [NSString stringWithFormat:@"%d%@", distance, @"小时前"];
+    }
+    else if (distance < 60 * 60 * 24 * 7) {
+        distance = distance / 60 / 60 / 24;
+        timeString = [NSString stringWithFormat:@"%d%@", distance,  @"天前"];
+    }
+    else if (distance < 60 * 60 * 24 * 7 * 4) {
+        distance = distance / 60 / 60 / 24 / 7;
+        timeString = [NSString stringWithFormat:@"%d%@", distance, @"周前"];
+    }
+    else {
+        timeString = [NSDate dateToStringByFormat:@"yyyy-MM-dd" date:date];
+    }
+    return timeString;
+}
 @end
