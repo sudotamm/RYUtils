@@ -11,7 +11,6 @@
     UIView+RYUtilities - QuartzCore.framework
     RYMediaPicker      - AssetsLibrary.framework
     RYMediaPicker      - CoreLocation.framework
-    UIDevice+RYUDID    - AdSupport.framework
     UIImage+RYBlurGlass   - Accelerate.framework
  版本管理：
  v1.0 
@@ -71,6 +70,8 @@
  v3.6 2014-4-4
     - RYRootBlurViewManager类添加
     - NSDate+RYAdditions添加时间线获取方法
+ v3.6.1 2014-4-11
+    - 替换RYUDID中IDFA为IDFV,移除ADFramework的依赖
  */
 
 #ifndef RYUtils_RYUtils_h

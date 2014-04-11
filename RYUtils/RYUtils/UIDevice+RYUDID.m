@@ -8,7 +8,6 @@
 
 #import "UIDevice+RYUDID.h"
 #import "NSString+RYMD5Addtion.h"
-#import <AdSupport/AdSupport.h>
 
 #include <sys/socket.h> // Per msqr
 #include <sys/sysctl.h>
@@ -79,10 +78,7 @@
     NSString *uniqueIdentifier = @"";
     if([[self systemVersion] floatValue] >= 6.0)
     {
-        if([ASIdentifierManager sharedManager].advertisingTrackingEnabled)
-            uniqueIdentifier = [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString];
-        else
-            uniqueIdentifier = @"";
+        uniqueIdentifier = [[self identifierForVendor] UUIDString];
     }
     else
     {
