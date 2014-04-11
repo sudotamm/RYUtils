@@ -72,6 +72,7 @@
     - NSDate+RYAdditions添加时间线获取方法
  v3.6.1 2014-4-11
     - 替换RYUDID中IDFA为IDFV,移除ADFramework的依赖
+    - Fix bug: 修复RYReverseLocation第一次使用定位是不会跳出定位提示的bug
  */
 
 #ifndef RYUtils_RYUtils_h

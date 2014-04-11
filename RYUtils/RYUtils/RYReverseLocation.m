@@ -66,7 +66,7 @@
 {
     self.completionBlock = completion;
     self.errorBlock = error;
-    if([CLLocationManager locationServicesEnabled] && [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized)
+    if([CLLocationManager locationServicesEnabled] && ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined))
     {
         [locationManager startUpdatingLocation];
     }
@@ -118,6 +118,6 @@
 	   didFailWithError:(NSError *)error
 {
     [manager stopUpdatingLocation];
-    self.errorBlock(error.description);
+    self.errorBlock(@"定位错误.");
 }
 @end
