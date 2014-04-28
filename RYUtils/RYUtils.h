@@ -73,6 +73,8 @@
  v3.6.1 2014-4-11
     - 替换RYUDID中IDFA为IDFV,移除ADFramework的依赖
     - Fix bug: 修复RYReverseLocation第一次使用定位是不会跳出定位提示的bug
+ v3.6.2 2014-4-28
+    - RYReverseLocation: 加入定位错误或解析错误提示
  */
 
 #ifndef RYUtils_RYUtils_h

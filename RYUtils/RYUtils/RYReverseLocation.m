@@ -87,7 +87,8 @@
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError*error){
         if(error)
         {
-            self.reverseErrorBlock(error.description);
+            NSLog(@"地址解析错误：%@",error.description);
+            self.reverseErrorBlock(@"地址解析错误.");
         }
         else
         {
@@ -118,6 +119,7 @@
 	   didFailWithError:(NSError *)error
 {
     [manager stopUpdatingLocation];
+    NSLog(@"定位错误：%@",error.description);
     self.errorBlock(@"定位错误.");
 }
 @end
