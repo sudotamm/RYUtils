@@ -286,7 +286,7 @@
 	if (self) {
         // Set default values for properties
         self.animationType = MBProgressHUDAnimationFade;
-        self.mode = MBProgressHUDModeIndeterminate;
+        self.mode = MBProgressHUDModeCustomView;
         self.labelText = nil;
         self.detailsLabelText = nil;
         self.opacity = 0.8f;
@@ -356,6 +356,15 @@
 	
     // Add label if label text was set
     if (nil != self.labelText) {
+        // Set label properties
+        label.font = self.labelFont;
+        label.adjustsFontSizeToFitWidth = NO;
+        label.numberOfLines = 0;
+        label.textAlignment = NSTextAlignmentCenter;
+        label.opaque = NO;
+        label.backgroundColor = [UIColor clearColor];
+        label.textColor = [UIColor whiteColor];
+        label.text = self.labelText;
         // Get size of label text
         CGSize dims = [self.labelText sizeWithFont:self.labelFont];
 		
@@ -367,16 +376,12 @@
         }
         else {
             lWidth = frame.size.width - 4 * margin;
+            
+            CGFloat maxHeightForLabel = frame.size.height - self.height - 2*margin;
+            CGSize labelSize = [label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(lWidth, maxHeightForLabel) lineBreakMode:label.lineBreakMode];
+            lHeight = labelSize.height;
+            lWidth = labelSize.width;
         }
-		
-        // Set label properties
-        label.font = self.labelFont;
-        label.adjustsFontSizeToFitWidth = NO;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.opaque = NO;
-        label.backgroundColor = [UIColor clearColor];
-        label.textColor = [UIColor whiteColor];
-        label.text = self.labelText;
 		
         // Update HUD size
         if (self.width < (lWidth + 2 * margin)) {

@@ -75,6 +75,9 @@
     - Fix bug: 修复RYReverseLocation第一次使用定位是不会跳出定位提示的bug
  v3.6.2 2014-4-28
     - RYReverseLocation: 加入定位错误或解析错误提示
+ v3.6.3 2014-5-14
+    - 1. 修复RYHUD第一次indicator不显示的bug
+    - 2. 加入RYHUD多行文本显示功能
  */
 
 #ifndef RYUtils_RYUtils_h
