@@ -80,6 +80,8 @@
     - 2. 加入RYHUD多行文本显示功能
  v3.6.4 2014-5-29
     - 加入NSObject+RYPropertyList category，动态获取类中所有属性及方法
+ v3.6.5 2014-5-29
+    - 修复RYHUD在展示nil或者空message时出现异常的bug
  */
 
 #ifndef RYUtils_RYUtils_h

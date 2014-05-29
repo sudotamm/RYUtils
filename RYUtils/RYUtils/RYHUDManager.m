@@ -43,6 +43,12 @@
 #pragma mark - Public methdos
 - (void)showWithMessage:(NSString *)message customView:(UIView *)customView hideDelay:(CGFloat)delay
 {
+    if(nil == message || [message isEqualToString:@""])
+    {
+        NSLog(@"RYHUD显示空信息.");
+        [hud hide:YES];
+        return;
+    }
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = NO;
     UIView *cv = [[[UIView alloc] init] autorelease];
@@ -60,6 +66,12 @@
 
 - (void)startedNetWorkActivityWithText:(NSString *)text
 {
+    if(nil == text || [text isEqualToString:@""])
+    {
+        NSLog(@"RYHUD显示空信息.");
+        [hud hide:YES];
+        return;
+    }
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = YES;
     hud.mode = MBProgressHUDModeIndeterminate;
@@ -75,6 +87,18 @@
 
 - (void)showMixedWithLoading:(NSString *)message end:(NSString *)endMessage
 {
+    if(nil == message || [message isEqualToString:@""])
+    {
+        NSLog(@"RYHUD-mixed显示空信息(startMessage).");
+        [hud hide:YES];
+        return;
+    }
+    if(nil == endMessage || [endMessage isEqualToString:@""])
+    {
+        NSLog(@"RYHUD-mixed显示空信息(endMessage).");
+        [hud hide:YES];
+        return;
+    }
     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = YES;
     hud.mode = MBProgressHUDModeDeterminate;
