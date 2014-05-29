@@ -78,6 +78,8 @@
  v3.6.3 2014-5-14
     - 1. 修复RYHUD第一次indicator不显示的bug
     - 2. 加入RYHUD多行文本显示功能
+ v3.6.4 2014-5-29
+    - 加入NSObject+RYPropertyList category，动态获取类中所有属性及方法
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -103,5 +105,6 @@
 #import "RYCycleScrollView.h"
 #import "UIImage+RYUtilities.h"
 #import "RYRootBlurViewManager.h"
+#import "NSObject+RYPropertyList.h"
 
 #endif

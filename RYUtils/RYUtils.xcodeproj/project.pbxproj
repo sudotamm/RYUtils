@@ -23,6 +23,8 @@
 		9438D1E11843233000B3BC61 /* UIImage+RYBlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */; };
 		9438D1E4184323A500B3BC61 /* NSArray+RYLocationTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 9438D1E2184323A500B3BC61 /* NSArray+RYLocationTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9438D1E5184323A500B3BC61 /* NSArray+RYLocationTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 9438D1E3184323A500B3BC61 /* NSArray+RYLocationTransform.m */; };
+		943B05261936FB0A00551AF4 /* NSObject+RYPropertyList.h in Headers */ = {isa = PBXBuildFile; fileRef = 943B05241936FB0A00551AF4 /* NSObject+RYPropertyList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		943B05271936FB0A00551AF4 /* NSObject+RYPropertyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 943B05251936FB0A00551AF4 /* NSObject+RYPropertyList.m */; };
 		94452F241862CE6A00EEB6D5 /* RYXMLReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 94452F221862CE6A00EEB6D5 /* RYXMLReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94452F251862CE6A00EEB6D5 /* RYXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 94452F231862CE6A00EEB6D5 /* RYXMLReader.m */; };
 		94452F281862CE7000EEB6D5 /* RYCommonMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 94452F261862CE7000EEB6D5 /* RYCommonMethods.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -74,6 +76,8 @@
 		9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYBlurGlass.m"; sourceTree = "<group>"; };
 		9438D1E2184323A500B3BC61 /* NSArray+RYLocationTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RYLocationTransform.h"; sourceTree = "<group>"; };
 		9438D1E3184323A500B3BC61 /* NSArray+RYLocationTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RYLocationTransform.m"; sourceTree = "<group>"; };
+		943B05241936FB0A00551AF4 /* NSObject+RYPropertyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RYPropertyList.h"; sourceTree = "<group>"; };
+		943B05251936FB0A00551AF4 /* NSObject+RYPropertyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RYPropertyList.m"; sourceTree = "<group>"; };
 		94452F221862CE6A00EEB6D5 /* RYXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYXMLReader.h; sourceTree = "<group>"; };
 		94452F231862CE6A00EEB6D5 /* RYXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYXMLReader.m; sourceTree = "<group>"; };
 		94452F261862CE7000EEB6D5 /* RYCommonMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYCommonMethods.h; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 				944A84B01744C55C00D9DF9D /* RYHUDManager.m */,
 				9448734E171C05DD00EB3569 /* MBProgressHUD.h */,
 				9448734F171C05DD00EB3569 /* MBProgressHUD.m */,
+				943B05241936FB0A00551AF4 /* NSObject+RYPropertyList.h */,
+				943B05251936FB0A00551AF4 /* NSObject+RYPropertyList.m */,
 				94487354171C05DE00EB3569 /* RYAsynImageView.h */,
 				94487355171C05DE00EB3569 /* RYAsynImageView.m */,
 				94487356171C05DE00EB3569 /* RYImageDownloader.h */,
@@ -221,6 +227,7 @@
 				94487369171C063300EB3569 /* RYUtils.h in Headers */,
 				940F773F17866D6A00212A27 /* RYMediaPicker.h in Headers */,
 				944DBF9318EE9B7100FD5906 /* RYRootBlurViewManager.h in Headers */,
+				943B05261936FB0A00551AF4 /* NSObject+RYPropertyList.h in Headers */,
 				9438D1E01843233000B3BC61 /* UIImage+RYBlurGlass.h in Headers */,
 				94FA514017CC790B0030C8C0 /* NSString+RYMD5Addtion.h in Headers */,
 				94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */,
@@ -319,6 +326,7 @@
 				94FA513717CC3FF40030C8C0 /* RYReverseLocation.m in Sources */,
 				94FA514117CC790B0030C8C0 /* NSString+RYMD5Addtion.m in Sources */,
 				94452F291862CE7000EEB6D5 /* RYCommonMethods.m in Sources */,
+				943B05271936FB0A00551AF4 /* NSObject+RYPropertyList.m in Sources */,
 				94452F2D1862CE8800EEB6D5 /* RYCycleScrollView.m in Sources */,
 				94452F251862CE6A00EEB6D5 /* RYXMLReader.m in Sources */,
 				94FA514517CC79390030C8C0 /* UIDevice+RYUDID.m in Sources */,
