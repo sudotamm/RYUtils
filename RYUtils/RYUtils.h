@@ -82,6 +82,8 @@
     - 加入NSObject+RYPropertyList category，动态获取类中所有属性及方法
  v3.6.5 2014-5-29
     - 修复RYHUD在展示nil或者空message时出现异常的bug
+ v3.6.6 2014-6-15
+    - 修复RYHUD第一次跟着alertview后面加载显示不出来的bug
  */
 
 #ifndef RYUtils_RYUtils_h

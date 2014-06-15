@@ -17,8 +17,15 @@
 {
     if(self = [super init])
     {
-        hud = [[MBProgressHUD alloc] initWithWindow:[UIApplication sharedApplication].keyWindow];
-        [[UIApplication sharedApplication].keyWindow addSubview:hud];
+        //hud加载在alertview之后会加入alertview的window中
+        //        UIWindow *hudWindow = [UIApplication sharedApplication].keyWindow;
+        //        if(![hudWindow isMemberOfClass:[UIWindow class]])
+        //        {
+        UIWindow *hudWindow = [[UIApplication sharedApplication].windows objectAtIndex:0];
+        //        }
+        
+        hud = [[MBProgressHUD alloc] initWithWindow:hudWindow];
+        [hudWindow addSubview:hud];
         hud.userInteractionEnabled = NO;
     }
     return self;
@@ -49,7 +56,8 @@
         [hud hide:YES];
         return;
     }
-    [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
+    UIWindow *hudWindow = (UIWindow *)hud.superview;
+    [hudWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = NO;
     UIView *cv = [[[UIView alloc] init] autorelease];
     cv.backgroundColor = [UIColor clearColor];
@@ -72,7 +80,8 @@
         [hud hide:YES];
         return;
     }
-    [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
+    UIWindow *hudWindow = (UIWindow *)hud.superview;
+    [hudWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = YES;
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = text;
@@ -99,7 +108,8 @@
         [hud hide:YES];
         return;
     }
-    [[UIApplication sharedApplication].keyWindow bringSubviewToFront:hud];
+    UIWindow *hudWindow = (UIWindow *)hud.superview;
+    [hudWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = YES;
     hud.mode = MBProgressHUDModeDeterminate;
     hud.labelText = message;
