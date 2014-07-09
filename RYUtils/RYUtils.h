@@ -84,6 +84,8 @@
     - 修复RYHUD在展示nil或者空message时出现异常的bug
  v3.6.6 2014-6-15
     - 修复RYHUD第一次跟着alertview后面加载显示不出来的bug
+ v3.6.7 2014-7-9
+    - RYDownloaderManager requestDataByPostWithURLString方法加入json参数处理
  */
 
 #ifndef RYUtils_RYUtils_h

@@ -198,18 +198,26 @@
     [request setHTTPMethod:@"POST"];
     [request setValue:contentType forHTTPHeaderField:@"Content-Type"];
     NSString *realString = nil;
-    if(params && params.allKeys.count != 0)
+    if([contentType rangeOfString:@"json"].length > 0)
     {
-        NSMutableString *bodyString = [NSMutableString string];
-        for(NSString *key in [params allKeys])
-        {
-            NSString *value = [NSString stringWithFormat:@"%@",[params objectForKey:key]];
-            [bodyString appendFormat:@"%@=%@&",key,value];
-        }
-        realString = [bodyString substringToIndex:(bodyString.length-1)];
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
+        realString = [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
     }
     else
-        realString = @"";
+    {
+        if(params && params.allKeys.count != 0)
+        {
+            NSMutableString *bodyString = [NSMutableString string];
+            for(NSString *key in [params allKeys])
+            {
+                NSString *value = [NSString stringWithFormat:@"%@",[params objectForKey:key]];
+                [bodyString appendFormat:@"%@=%@&",key,value];
+            }
+            realString = [bodyString substringToIndex:(bodyString.length-1)];
+        }
+        else
+            realString = @"";
+    }
     NSData *paramData = [realString dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:paramData];
     
