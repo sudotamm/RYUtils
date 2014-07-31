@@ -86,6 +86,8 @@
     - 修复RYHUD第一次跟着alertview后面加载显示不出来的bug
  v3.6.7 2014-7-9
     - RYDownloaderManager requestDataByPostWithURLString方法加入json参数处理
+ v3.6.8 2014-7-31
+    - RYHUDManager 修正文本显示带"\n"字符不正常的bug
  */
 
 #ifndef RYUtils_RYUtils_h

@@ -365,24 +365,13 @@
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor whiteColor];
         label.text = self.labelText;
-        // Get size of label text
-        CGSize dims = [self.labelText sizeWithFont:self.labelFont];
-		
         // Compute label dimensions based on font metrics if size is larger than max then clip the label width
-        float lHeight = dims.height;
-        float lWidth;
-        if (dims.width <= (frame.size.width - 4 * margin)) {
-            lWidth = dims.width;
-        }
-        else {
-            lWidth = frame.size.width - 4 * margin;
-            
-            CGFloat maxHeightForLabel = frame.size.height - self.height - 2*margin;
-            CGSize labelSize = [label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(lWidth, maxHeightForLabel) lineBreakMode:label.lineBreakMode];
-            lHeight = labelSize.height;
-            lWidth = labelSize.width;
-        }
-		
+        CGFloat maxWidthForLabel = frame.size.width - 4 * margin;
+        CGFloat maxHeightForLabel = frame.size.height - self.height - 2*margin;
+        CGSize labelSize = [label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(maxWidthForLabel, maxHeightForLabel) lineBreakMode:label.lineBreakMode];
+        CGFloat lHeight = labelSize.height;
+        CGFloat lWidth = labelSize.width;
+        
         // Update HUD size
         if (self.width < (lWidth + 2 * margin)) {
             self.width = lWidth + 2 * margin;
