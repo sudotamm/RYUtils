@@ -32,10 +32,21 @@
 + (NSString *)generateUniqueString;
 
 /**
- 返回base64字符串
- @param imgData 需要base64加密的数据，字符串可以先转data
- @returns base64加密后的字符串
+ *  base64编码
+ *  文字或图片转成二进制data之后进行base64编码，lineLength传0即可
+ *  @param imgData    需要编码的数据流
+ *  @param lineLength 传0即可
+ *
+ *  @return 编码后的base64字符串
  */
-+ (NSString *) base64EncodingWithLineLength:(unsigned int) lineLength data:(NSData *)imgData;
++ (NSString *) base64StringFromData:(NSData *)imgData length:(NSInteger)lineLength;
+/**
+ *  base64解码
+ *  将base64字符串解码成二进制流
+ *  @param string 需要解码的base64字符串
+ *
+ *  @return 解码后的二进制流
+ */
++ (NSData *)dataFromBase64String:(NSString *)string;
 
 @end

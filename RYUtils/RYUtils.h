@@ -88,6 +88,8 @@
     - RYDownloaderManager requestDataByPostWithURLString方法加入json参数处理
  v3.6.8 2014-7-31
     - RYHUDManager 修正文本显示带"\n"字符不正常的bug
+ v3.6.9 2014-8-4
+    - RYCommonMethods 加入base64编码/解码的通用方法
  */
 
 #ifndef RYUtils_RYUtils_h
