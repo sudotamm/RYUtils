@@ -66,7 +66,29 @@
 {
     self.completionBlock = completion;
     self.errorBlock = error;
-    if([CLLocationManager locationServicesEnabled] && ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined))
+    
+    //iOS定位提示
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
+    {
+        if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+        {
+            /*
+                If the NSLocationAlwaysUsageDescription key is not specified in your
+                Info.plist, this method will do nothing, as your app will be assumed not
+                to support Always authorization.
+             */
+            NSString *locateDescription = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"NSLocationAlwaysUsageDescription"];
+            if(locateDescription.length == 0)
+            {
+                NSString *errorDes = @"iOS8下使用定位请在app-info.plist里加入key:NSLocationAlwaysUsageDescription.";
+                NSError *locateError = [NSError errorWithDomain:errorDes code:400 userInfo:nil];
+                [self locationManager:locationManager didFailWithError:locateError];
+            }
+            [locationManager requestAlwaysAuthorization];
+        }
+    }
+    
+    if([CLLocationManager locationServicesEnabled] && ([CLLocationManager authorizationStatus] >= kCLAuthorizationStatusAuthorized))
     {
         [locationManager startUpdatingLocation];
     }

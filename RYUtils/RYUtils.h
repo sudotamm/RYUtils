@@ -90,6 +90,8 @@
     - RYHUDManager 修正文本显示带"\n"字符不正常的bug
  v3.6.9 2014-8-4
     - RYCommonMethods 加入base64编码/解码的通用方法
+ v3.7 2014-11-28
+    - iOS8下定位依赖处理
  */
 
 #ifndef RYUtils_RYUtils_h
