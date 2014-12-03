@@ -227,7 +227,7 @@
     const char *value = [baseString UTF8String];
     
     unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(value, strlen(value), outputBuffer);
+    CC_MD5(value, (CC_LONG)(strlen(value)), outputBuffer);
     
     NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
@@ -236,6 +236,5 @@
     
     return [outputString autorelease];
 }
-
 
 @end

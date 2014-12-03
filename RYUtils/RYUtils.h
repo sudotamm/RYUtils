@@ -97,6 +97,8 @@
  v3.7.8 2014-12-3
     - 移除64bit支持下整型转换的warning
     - 合并字符串md5加密方法至类RYCommonMethods中
+ v3.7.9 2014-12-3
+    - 移除64bit支持下得类型转换warning
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -112,7 +114,6 @@
 #import "RYPullDownRefreshTableView.h"
 #import "RYMediaPicker.h"
 #import "RYReverseLocation.h"
-#import "NSString+RYMD5Addtion.h"
 #import "UIDevice+RYUDID.h" 
 #import "NSArray+RYLocationTransform.h"
 #import "UIImage+RYBlurGlass.h"
