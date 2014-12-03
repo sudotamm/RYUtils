@@ -7,7 +7,7 @@
 //
 
 #import "UIDevice+RYUDID.h"
-#import "NSString+RYMD5Addtion.h"
+#import "RYCommonMethods.h"
 
 #include <sys/socket.h> // Per msqr
 #include <sys/sysctl.h>
@@ -83,7 +83,7 @@
     else
     {
         NSString *macaddress = [[UIDevice currentDevice] macaddress];
-        uniqueIdentifier = [macaddress stringFromMD5];
+        uniqueIdentifier = [RYCommonMethods md5String:macaddress];
     }
     return uniqueIdentifier;
 }

@@ -49,4 +49,9 @@
  */
 + (NSData *)dataFromBase64String:(NSString *)string;
 
+/**
+	字符串md5加密
+	@returns 返回加密后的字符串
+ */
++ (NSString *)md5String:(NSString *)baseString;
 @end

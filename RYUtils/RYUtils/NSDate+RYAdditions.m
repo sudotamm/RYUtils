@@ -71,23 +71,23 @@
     if (distance <= 0)
         timeString = @"现在";
     else if (distance < 60) {
-        timeString = [NSString stringWithFormat:@"%d%@", distance, @"秒前"];
+        timeString = [NSString stringWithFormat:@"%ld%@", (long)distance, @"秒前"];
     }
     else if (distance < 60 * 60) {
         distance = distance / 60;
-        timeString = [NSString stringWithFormat:@"%d%@", distance, @"分钟前"];
+        timeString = [NSString stringWithFormat:@"%ld%@", (long)distance, @"分钟前"];
     }
     else if (distance < 60 * 60 * 24) {
         distance = distance / 60 / 60;
-        timeString = [NSString stringWithFormat:@"%d%@", distance, @"小时前"];
+        timeString = [NSString stringWithFormat:@"%ld%@", (long)distance, @"小时前"];
     }
     else if (distance < 60 * 60 * 24 * 7) {
         distance = distance / 60 / 60 / 24;
-        timeString = [NSString stringWithFormat:@"%d%@", distance,  @"天前"];
+        timeString = [NSString stringWithFormat:@"%ld%@", (long)distance,  @"天前"];
     }
     else if (distance < 60 * 60 * 24 * 7 * 4) {
         distance = distance / 60 / 60 / 24 / 7;
-        timeString = [NSString stringWithFormat:@"%d%@", distance, @"周前"];
+        timeString = [NSString stringWithFormat:@"%ld%@", (long)distance, @"周前"];
     }
     else {
         timeString = [NSDate dateToStringByFormat:@"yyyy-MM-dd" date:date];

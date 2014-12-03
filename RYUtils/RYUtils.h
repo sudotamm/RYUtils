@@ -94,6 +94,9 @@
     - iOS8下定位依赖处理
  v3.7.7 2014-12-3
     - iOS8下设置应用使用是定位
+ v3.7.8 2014-12-3
+    - 移除64bit支持下整型转换的warning
+    - 合并字符串md5加密方法至类RYCommonMethods中
  */
 
 #ifndef RYUtils_RYUtils_h
