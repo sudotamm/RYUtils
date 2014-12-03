@@ -70,21 +70,21 @@
     //iOS定位提示
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
     {
-        if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)])
+        if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
         {
             /*
-                If the NSLocationAlwaysUsageDescription key is not specified in your
-                Info.plist, this method will do nothing, as your app will be assumed not
-                to support Always authorization.
+             *      If the NSLocationWhenInUseUsageDescription key is not specified in your
+             *      Info.plist, this method will do nothing, as your app will be assumed not
+             *      to support WhenInUse authorization.
              */
-            NSString *locateDescription = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"NSLocationAlwaysUsageDescription"];
+            NSString *locateDescription = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"NSLocationWhenInUseUsageDescription"];
             if(locateDescription.length == 0)
             {
-                NSString *errorDes = @"iOS8下使用定位请在app-info.plist里加入key:NSLocationAlwaysUsageDescription.";
+                NSString *errorDes = @"iOS8下使用定位请在app-info.plist里加入key:NSLocationWhenInUseUsageDescription.";
                 NSError *locateError = [NSError errorWithDomain:errorDes code:400 userInfo:nil];
                 [self locationManager:locationManager didFailWithError:locateError];
             }
-            [locationManager requestAlwaysAuthorization];
+            [locationManager requestWhenInUseAuthorization];
         }
     }
     
