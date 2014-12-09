@@ -28,19 +28,34 @@ typedef enum {
 CLLocationManagerDelegate>
 
 @property (nonatomic, assign) BOOL showExtraInfo;       //是否获取media文件的详细信息，默认no
-@property (nonatomic, assign) id<RYMediaPickerDelegate> delegate;
-@property (nonatomic, assign) id parentController;      //基于parentController present picker
 @property (nonatomic, assign) BOOL mediaEditing;        //media文件是否能编辑，默认no
 @property (nonatomic, assign) FileType fileType;        //media文件的类型
 
-//详细信息
-@property (nonatomic, retain) CLLocation *fileLocation; //media文件的经纬度
-@property (nonatomic, retain) NSDate *fileDate;         //media文件的日期
-@property (nonatomic, copy) NSString *fileLocationName; //media文件的地址名称
+#if ! __has_feature(objc_arc)
+@property (nonatomic, assign) id<RYMediaPickerDelegate> delegate;
+@property (nonatomic, assign) id parentController;      //基于parentController present picker
+#else
+@property (nonatomic, weak) id<RYMediaPickerDelegate> delegate;
+@property (nonatomic, weak) id parentController;      //基于parentController present picker
+#endif
 
 //基本信息
+@property (nonatomic, copy) NSString *fileName;       //media文件的文件名 - 唯一识别名称
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) NSData *fileData;         //media文件的二进制流数据
-@property (nonatomic, retain) NSString *fileName;       //media文件的文件名 - 唯一识别名称
+#else
+@property (nonatomic, strong) NSData *fileData;         //media文件的二进制流数据
+#endif
+
+//详细信息
+@property (nonatomic, copy) NSString *fileLocationName; //media文件的地址名称
+#if ! __has_feature(objc_arc)
+@property (nonatomic, retain) CLLocation *fileLocation; //media文件的经纬度
+@property (nonatomic, retain) NSDate *fileDate;         //media文件的日期
+#else
+@property (nonatomic, strong) CLLocation *fileLocation; //media文件的经纬度
+@property (nonatomic, strong) NSDate *fileDate;         //media文件的日期
+#endif
 
 + (RYMediaPicker *)sharedPicker;
 

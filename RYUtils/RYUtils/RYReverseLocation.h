@@ -22,7 +22,11 @@ typedef void (^ReverseErrorBlock)(NSString *error);
 
 @interface RYReverseLocation : NSObject<CLLocationManagerDelegate>
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) CLLocation *curLocation;          //保存定位成功之后的经纬度
+#else
+@property (nonatomic, strong) CLLocation *curLocation;          //保存定位成功之后的经纬度
+#endif
 @property (nonatomic, copy) NSString *address;                  //保存地址解析成功后的位置
 //block 使用,简化回调
 @property (nonatomic, copy) CompletionBlock completionBlock;                //定位成功后的回调

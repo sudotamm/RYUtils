@@ -101,6 +101,8 @@
     - 移除64bit支持下得类型转换warning
  v3.8 2014-12-9
     - 移除自定义下拉刷新控件
+ v3.9 2014-12-9
+    - 加入自定义框架的arc/非arc的支持处理
  */
 
 #ifndef RYUtils_RYUtils_h

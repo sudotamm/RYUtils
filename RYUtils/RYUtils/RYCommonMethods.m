@@ -48,7 +48,9 @@
         [paragraphStyle setLineBreakMode:NSLineBreakByWordWrapping];
         
         NSDictionary *attributes = @{ NSFontAttributeName: textView.font, NSParagraphStyleAttributeName : paragraphStyle };
+#if ! __has_feature(objc_arc)
         [paragraphStyle release];
+#endif
         
         CGRect size = [textToMeasure boundingRectWithSize:CGSizeMake(CGRectGetWidth(frame), MAXFLOAT)
                                                   options:NSStringDrawingUsesLineFragmentOrigin
@@ -233,8 +235,11 @@
     for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
         [outputString appendFormat:@"%02x",outputBuffer[count]];
     }
-    
+#if ! __has_feature(objc_arc)
     return [outputString autorelease];
+#else
+    return outputString;
+#endif
 }
 
 @end

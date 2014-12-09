@@ -239,7 +239,9 @@ CGFloat RadiansToDegreesRY(CGFloat radians) {return radians * 180/M_PI;};
 	CGAffineTransform t = CGAffineTransformMakeRotation(DegreesToRadiansRY(degrees));
 	rotatedViewBox.transform = t;
 	CGSize rotatedSize = rotatedViewBox.frame.size;
+#if ! __has_feature(objc_arc)
 	[rotatedViewBox release];
+#endif
 	
 	// Create the bitmap context
 	UIGraphicsBeginImageContext(rotatedSize);

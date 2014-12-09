@@ -41,11 +41,13 @@
     return manager;
 }
 
+#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
     [hud release];
     [super dealloc];
 }
+#endif
 
 #pragma mark - Public methdos
 - (void)showWithMessage:(NSString *)message customView:(UIView *)customView hideDelay:(CGFloat)delay
@@ -59,7 +61,11 @@
     UIWindow *hudWindow = (UIWindow *)hud.superview;
     [hudWindow bringSubviewToFront:hud];
     hud.userInteractionEnabled = NO;
+#if ! __has_feature(objc_arc)
     UIView *cv = [[[UIView alloc] init] autorelease];
+#else
+    UIView *cv = [[UIView alloc] init];
+#endif
     cv.backgroundColor = [UIColor clearColor];
     if(!customView)
         hud.customView = cv;
@@ -127,7 +133,11 @@
         hud.progress = progress;
         usleep(10000);
     }
+#if ! __has_feature(objc_arc)
     hud.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]] autorelease];
+#else
+    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+#endif
     hud.mode = MBProgressHUDModeCustomView;
     hud.labelText = endMessage;
 }

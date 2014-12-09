@@ -10,7 +10,11 @@
 
 @interface RYReverseLocation()
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) CLLocationManager *locationManager;
+#else
+@property (nonatomic, strong) CLLocationManager *locationManager;
+#endif
 
 @end
 
@@ -49,16 +53,18 @@
 
 - (void)dealloc
 {
+    locationManager.delegate = nil;
+#if ! __has_feature(objc_arc)
     [reverseErrorBlock release];
     [reverseCompletionBlock release];
     [completionBlock release];
     [errorBlock release];
     [address release];
     [curLocation release];
-    locationManager.delegate = nil;
     [locationManager release];
     locationManager = nil;
     [super dealloc];
+#endif
 }
 
 #pragma mark - Public methods
@@ -122,7 +128,9 @@
             }
         }
     }];
+#if ! __has_feature(objc_arc)
     [geocoder release];
+#endif
 }
 
 #pragma mark - CLLocationManagerDelegate methods

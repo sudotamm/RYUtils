@@ -10,8 +10,13 @@
 
 @interface RYRootBlurView : UIView
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) UIImageView *blurBGImageView;
 @property (nonatomic, retain) UIView *contentView;
+#else
+@property (nonatomic, strong) UIImageView *blurBGImageView;
+@property (nonatomic, strong) UIView *contentView;
+#endif
 
 @end
 
@@ -34,9 +39,11 @@
 
 - (void)dealloc
 {
+#if ! __has_feature(objc_arc)
     [blurBGImageView release];
     [contentView release];
     [super dealloc];
+#endif
 }
 
 #pragma mark - UIResponder methods
@@ -48,8 +55,11 @@
 @end
 
 @interface RYRootBlurViewManager()
-
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) RYRootBlurView *blurView;
+#else
+@property (nonatomic, strong) RYRootBlurView *blurView;
+#endif
 
 @end
 
@@ -80,11 +90,13 @@
     return manager;
 }
 
+#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
     [blurView release];
     [super dealloc];
 }
+#endif
 
 #pragma mark - Public methods
 

@@ -60,11 +60,13 @@
     return self;
 }
 
+#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
     [downloaders release];
     [super dealloc];
 }
+#endif
 
 #pragma mark - Private methods
 - (RYDownloader *)reuseDownloaderWithDelegate:(id<RYDownloaderDelegate>)receiver
@@ -91,7 +93,9 @@
     {
         downloader = [[RYDownloader alloc] init];
         [downloaders addObject:downloader];
+#if ! __has_feature(objc_arc)
         [downloader release];
+#endif
     }
     return downloader;
 }
@@ -201,7 +205,11 @@
     if([contentType rangeOfString:@"json"].length > 0)
     {
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
+#if ! __has_feature(objc_arc)
         realString = [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
+#else
+        realString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+#endif
     }
     else
     {
@@ -235,7 +243,11 @@
                               purpose:(NSString *)purpose
 {
     //根据url初始化request
+#if ! __has_feature(objc_arc)
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
+#else
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+#endif
     [request setURL:[NSURL URLWithString:urlStr]];
     [request setHTTPMethod:@"POST"];
 

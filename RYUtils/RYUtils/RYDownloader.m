@@ -34,10 +34,12 @@
 - (void)dealloc
 {
     [self cancelDownload];
+#if ! __has_feature(objc_arc)
     [urlRequest release];
 	[responseData release];
 	[purpose release];
 	[super dealloc];
+#endif
 }
 
 #pragma mark - Private methods
@@ -62,7 +64,9 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSMutableData *data = [[NSMutableData alloc] init];
     self.responseData = data;
+#if ! __has_feature(objc_arc)
     [data release];
+#endif
     self.theConnection = [NSURLConnection connectionWithRequest:request delegate:self];
 }
 - (void)cancelDownload

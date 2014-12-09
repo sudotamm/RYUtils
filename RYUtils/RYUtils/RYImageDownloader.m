@@ -16,13 +16,15 @@
 #pragma mark Memory management
 - (void)dealloc
 {
-    [requestUrl release];
     [theConnection cancel];
+#if ! __has_feature(objc_arc)
+    [requestUrl release];
     [theConnection release];
     theConnection = nil;
 	[activeDownload release];
 	[purpose release];
 	[super dealloc];
+#endif
 }
 
 
@@ -35,11 +37,15 @@
 	NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url] 
 																			  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30.0] delegate:self];
     self.theConnection = conn;
+#if ! __has_feature(objc_arc)
     [conn release];
+#endif
 	if (self.theConnection != nil) {
 		NSMutableData *data = [[NSMutableData alloc] init];
         self.activeDownload = data;
+#if ! __has_feature(objc_arc)
         [data release];
+#endif
 	}
 }
 - (void)cancelDownload

@@ -12,8 +12,13 @@
 
 @interface RYCycleScrollView : UIScrollView<UIScrollViewDelegate>
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) NSMutableArray *cycleArray;
 @property (nonatomic, assign) id<RYCycleScrollViewDelegate> cycleDelegate;
+#else
+@property (nonatomic, strong) NSMutableArray *cycleArray;
+@property (nonatomic, weak) id<RYCycleScrollViewDelegate> cycleDelegate;
+#endif
 
 /**
 	首尾相连滚动异步加载头条图

@@ -19,8 +19,8 @@
 
 @implementation RYAsynImageView
 
-@synthesize shouldResize = shouldResize_;
-@synthesize aysnLoader = aysnLoader_;
+@synthesize shouldResize;
+@synthesize aysnLoader;
 @synthesize placeholderName,cacheDir;
 @synthesize forYulong;
 @synthesize originalFrame;
@@ -44,13 +44,15 @@
 
 - (void)dealloc
 {
+    [aysnLoader cancelDownload];
+    aysnLoader.delegate = nil;
+#if ! __has_feature(objc_arc)
     [cacheDir release];
     [placeholderName release];
-    [aysnLoader_ cancelDownload];
-    aysnLoader_.delegate = nil;
-    [aysnLoader_ release];
-    aysnLoader_ = nil;
+    [aysnLoader release];
+    aysnLoader = nil;
     [super dealloc];
+#endif
 }
 
 #pragma mark - Private methods
@@ -125,11 +127,11 @@
 
 - (void)aysnLoadImageWithUrl:(NSString *)url placeHolder:(NSString *)placeHolder
 {
-    if(nil != aysnLoader_)
+    if(nil != aysnLoader)
     {
-        [aysnLoader_ cancelDownload];
-        aysnLoader_.delegate = nil;
-        aysnLoader_ = nil;
+        [aysnLoader cancelDownload];
+        aysnLoader.delegate = nil;
+        aysnLoader = nil;
     }
     self.placeholderName = placeHolder;
     if(nil == url || [url isEqualToString:@""])
@@ -181,7 +183,9 @@
 //        if(forYulong)
 //            realUrl = [[ylAppManager sharedAppManager] getURL:url];
         [self.aysnLoader startDownloadWithURL:realUrl];
+#if ! __has_feature(objc_arc)
         [d release];
+#endif
     }
 }
 

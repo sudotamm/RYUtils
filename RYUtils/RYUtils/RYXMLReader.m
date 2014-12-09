@@ -25,7 +25,9 @@ NSString *const kXMLReaderTextNodeKey = @"text";
 {
     RYXMLReader *reader = [[RYXMLReader alloc] init];
     NSDictionary *rootDictionary = [reader objectWithData:data];
+#if ! __has_feature(objc_arc)
     [reader release];
+#endif
     return rootDictionary;
 }
 
@@ -37,20 +39,22 @@ NSString *const kXMLReaderTextNodeKey = @"text";
 
 #pragma mark -
 #pragma mark Parsing
-
+#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
     [dictionaryStack release];
     [textInProgress release];
     [super dealloc];
 }
+#endif
 
 - (NSDictionary *)objectWithData:(NSData *)data
 {
     // Clear out any old data
+#if ! __has_feature(objc_arc)
     [dictionaryStack release];
     [textInProgress release];
-    
+#endif
     dictionaryStack = [[NSMutableArray alloc] init];
     textInProgress = [[NSMutableString alloc] init];
     
@@ -58,7 +62,11 @@ NSString *const kXMLReaderTextNodeKey = @"text";
     [dictionaryStack addObject:[NSMutableDictionary dictionary]];
     
     // Parse the XML
+#if ! __has_feature(objc_arc)
     NSXMLParser *parser = [[[NSXMLParser alloc] initWithData:data] autorelease];
+#else
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
+#endif
     parser.delegate = self;
     BOOL success = [parser parse];
     
@@ -131,7 +139,9 @@ NSString *const kXMLReaderTextNodeKey = @"text";
         [dictInProgress setObject:valueString forKey:kXMLReaderTextNodeKey];
         
         // Reset the text
+#if ! __has_feature(objc_arc)
         [textInProgress release];
+#endif
         textInProgress = [[NSMutableString alloc] init];
     }
     

@@ -23,7 +23,11 @@
 
 + (RYHUDManager *)sharedManager;
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) MBProgressHUD *hud;
+#else
+@property (nonatomic, strong) MBProgressHUD *hud;
+#endif
 
 /**
 	图文混杂（图在上，文字在下）的方式展示hud，并设置隐藏时间

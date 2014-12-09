@@ -22,12 +22,19 @@ typedef enum
 @interface RYDownloader : NSObject
 
 @property (nonatomic, copy) NSString* purpose;              //downloader的标识
-@property (nonatomic, retain) NSURLRequest *urlRequest;
 @property (nonatomic, assign) DownloaderStatus status;      //设置下载状态，默认为等待下载
 
+#if ! __has_feature(objc_arc)
+@property (nonatomic, retain) NSURLRequest *urlRequest;
 @property (nonatomic, retain) NSURLConnection *theConnection;
 @property (nonatomic, retain) NSMutableData *responseData;
 @property (nonatomic, assign) id<RYDownloaderDelegate> delegate;
+#else
+@property (nonatomic, strong) NSURLRequest *urlRequest;
+@property (nonatomic, strong) NSURLConnection *theConnection;
+@property (nonatomic, strong) NSMutableData *responseData;
+@property (nonatomic, weak) id<RYDownloaderDelegate> delegate;
+#endif
 
 - (void)startDownloadWithRequest:(NSURLRequest *)request
                         callback:(id<RYDownloaderDelegate>)receiver

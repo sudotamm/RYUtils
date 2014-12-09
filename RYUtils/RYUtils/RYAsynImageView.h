@@ -13,10 +13,12 @@
 @interface RYAsynImageView : UIImageView
 {
     RYImageDownloader *aysnLoader_;
-    BOOL shouldResize_;
 }
-
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) RYImageDownloader *aysnLoader;
+#else
+@property (nonatomic, strong) RYImageDownloader *aysnLoader;
+#endif
 
 /**
     加载后的图片是否根据ImageView的frame来缩放，默认为NO

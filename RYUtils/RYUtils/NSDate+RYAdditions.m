@@ -16,7 +16,9 @@
     [dateFormatter setDateFormat:format];
 	[dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
     NSDate *date = [dateFormatter dateFromString:string];
+#if ! __has_feature(objc_arc)
     [dateFormatter release];
+#endif
     return date;
 }
 // covert date to string by given format
@@ -26,7 +28,9 @@
     [dateFormatter setDateFormat:format];
 	[dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
     NSString *str = [dateFormatter stringFromDate:date];
+#if ! __has_feature(objc_arc)
     [dateFormatter release];
+#endif
     return str;
 }
 

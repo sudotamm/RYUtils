@@ -11,7 +11,11 @@
 
 @interface RYMediaPicker()
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) UIImagePickerController *imagePickerController;
+#else
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
+#endif
 
 @end
 
@@ -33,6 +37,7 @@
     return picker;
 }
 
+#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
     [imagePickerController release];
@@ -43,6 +48,7 @@
     [fileData release];
     [super dealloc];
 }
+#endif
 
 - (UIImagePickerController *)imagePickerController
 {
@@ -226,7 +232,9 @@
             locManager.distanceFilter = 200.f;
             [locManager startUpdatingLocation];
         }
+#if ! __has_feature(objc_arc)
         [library release];
+#endif
     }
     else
     {
@@ -253,7 +261,9 @@
         [self.delegate didGetFileWithData:self];
         [self clearCacheAfterCallBack];
     }];
+#if ! __has_feature(objc_arc)
     [geocoder release];
+#endif
 }
 
 #pragma mark - CLLocationManagerDelegate methods
@@ -265,7 +275,9 @@
 	//Request for new annotations
     [manager stopUpdatingLocation];
     manager.delegate = nil;
+#if ! __has_feature(objc_arc)
     [manager release];
+#endif
     manager = nil;
     
     self.fileLocation = newLocation;
@@ -277,7 +289,9 @@
 {
     [manager stopUpdatingLocation];
     manager.delegate = nil;
+#if ! __has_feature(objc_arc)
     [manager release];
+#endif
     manager = nil;
 
     [self.delegate didGetFileWithData:self];

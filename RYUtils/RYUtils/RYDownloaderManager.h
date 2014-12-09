@@ -27,7 +27,11 @@
 
 @interface RYDownloaderManager : NSObject
 
+#if ! __has_feature(objc_arc)
 @property (nonatomic, retain) NSMutableArray *downloaders;
+#else
+@property (nonatomic, strong) NSMutableArray *downloaders;
+#endif
 
 + (RYDownloaderManager *)sharedManager;
 

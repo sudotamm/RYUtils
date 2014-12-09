@@ -68,10 +68,13 @@
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(asyncImageViewTappedWithGesture:)];
             [asynImgView addGestureRecognizer:tapGesture];
             asynImgView.tag = index;
+#if ! __has_feature(objc_arc)
             [tapGesture release];
-            
+#endif
             [self addSubview:asynImgView];
+#if ! __has_feature(objc_arc)
             [asynImgView release];
+#endif
             index++;
         }
         [self setContentSize:CGSizeMake(self.frame.size.width*self.cycleArray.count, self.frame.size.height)];
@@ -102,10 +105,12 @@
     self.pagingEnabled = YES;
 }
 
+#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
     [cycleArray release];
     [super dealloc];
 }
+#endif
 
 @end
