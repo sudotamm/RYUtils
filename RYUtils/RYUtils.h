@@ -99,6 +99,8 @@
     - 合并字符串md5加密方法至类RYCommonMethods中
  v3.7.9 2014-12-3
     - 移除64bit支持下得类型转换warning
+ v3.8 2014-12-9
+    - 移除自定义下拉刷新控件
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -111,7 +113,6 @@
 #import "RYAppBackgroundConfiger.h"
 #import "RYDownloader.h"
 #import "RYDownloaderManager.h"
-#import "RYPullDownRefreshTableView.h"
 #import "RYMediaPicker.h"
 #import "RYReverseLocation.h"
 #import "UIDevice+RYUDID.h" 
