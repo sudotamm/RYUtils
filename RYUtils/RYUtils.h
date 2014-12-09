@@ -103,7 +103,6 @@
     - 移除自定义下拉刷新控件
  v3.9 2014-12-9
     - 加入自定义框架的arc/非arc的支持处理
- v4.0 - test
  */
 
 #ifndef RYUtils_RYUtils_h
