@@ -45,6 +45,8 @@
 		944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944A84B01744C55C00D9DF9D /* RYHUDManager.m */; };
 		944DBF9318EE9B7100FD5906 /* RYRootBlurViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		944DBF9418EE9B7100FD5906 /* RYRootBlurViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */; };
+		949B3DEC1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 949B3DEA1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.h */; };
+		949B3DED1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B3DEB1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m */; };
 		94E8811B18E40222003EB0C2 /* UIImage+RYUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94E8811C18E40222003EB0C2 /* UIImage+RYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */; };
 		94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -95,6 +97,8 @@
 		944A84B01744C55C00D9DF9D /* RYHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYHUDManager.m; sourceTree = "<group>"; };
 		944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYRootBlurViewManager.h; sourceTree = "<group>"; };
 		944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYRootBlurViewManager.m; sourceTree = "<group>"; };
+		949B3DEA1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RYAssetLaunchImage.h"; sourceTree = "<group>"; };
+		949B3DEB1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYAssetLaunchImage.m"; sourceTree = "<group>"; };
 		94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RYUtilities.h"; sourceTree = "<group>"; };
 		94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYUtilities.m"; sourceTree = "<group>"; };
 		94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYReverseLocation.h; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				9438D1DB1843232F00B3BC61 /* UIImage+RYScreenShot.m */,
 				9438D1DC1843232F00B3BC61 /* UIImage+RYBlurGlass.h */,
 				9438D1DD1843232F00B3BC61 /* UIImage+RYBlurGlass.m */,
+				949B3DEA1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.h */,
+				949B3DEB1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m */,
 				944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */,
 				944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */,
 				94487341171C057E00EB3569 /* Supporting Files */,
@@ -211,6 +217,7 @@
 				943B05261936FB0A00551AF4 /* NSObject+RYPropertyList.h in Headers */,
 				9438D1E01843233000B3BC61 /* UIImage+RYBlurGlass.h in Headers */,
 				94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */,
+				949B3DEC1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.h in Headers */,
 				94452F281862CE7000EEB6D5 /* RYCommonMethods.h in Headers */,
 				94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */,
 				944A84B11744C55C00D9DF9D /* RYHUDManager.h in Headers */,
@@ -298,6 +305,7 @@
 				9438D1DF1843233000B3BC61 /* UIImage+RYScreenShot.m in Sources */,
 				944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */,
 				940F773617866D5700212A27 /* RYDownloader.m in Sources */,
+				949B3DED1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m in Sources */,
 				940F773817866D5700212A27 /* RYDownloaderManager.m in Sources */,
 				940F774017866D6A00212A27 /* RYMediaPicker.m in Sources */,
 				94FA513717CC3FF40030C8C0 /* RYReverseLocation.m in Sources */,
