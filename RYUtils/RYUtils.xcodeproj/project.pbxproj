@@ -49,6 +49,8 @@
 		949B3DED1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B3DEB1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m */; };
 		94E8811B18E40222003EB0C2 /* UIImage+RYUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94E8811C18E40222003EB0C2 /* UIImage+RYUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */; };
+		94F1051C1A3ABCCF006BCC2A /* RYBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 94F1051A1A3ABCCF006BCC2A /* RYBaseModel.h */; };
+		94F1051D1A3ABCCF006BCC2A /* RYBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F1051B1A3ABCCF006BCC2A /* RYBaseModel.m */; };
 		94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94FA513717CC3FF40030C8C0 /* RYReverseLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FA513517CC3FF40030C8C0 /* RYReverseLocation.m */; };
 		94FA514417CC79390030C8C0 /* UIDevice+RYUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = 94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,6 +103,8 @@
 		949B3DEB1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYAssetLaunchImage.m"; sourceTree = "<group>"; };
 		94E8811918E40222003EB0C2 /* UIImage+RYUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RYUtilities.h"; sourceTree = "<group>"; };
 		94E8811A18E40222003EB0C2 /* UIImage+RYUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RYUtilities.m"; sourceTree = "<group>"; };
+		94F1051A1A3ABCCF006BCC2A /* RYBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYBaseModel.h; sourceTree = "<group>"; };
+		94F1051B1A3ABCCF006BCC2A /* RYBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYBaseModel.m; sourceTree = "<group>"; };
 		94FA513417CC3FF40030C8C0 /* RYReverseLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYReverseLocation.h; sourceTree = "<group>"; };
 		94FA513517CC3FF40030C8C0 /* RYReverseLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYReverseLocation.m; sourceTree = "<group>"; };
 		94FA514217CC79390030C8C0 /* UIDevice+RYUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RYUDID.h"; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 				949B3DEB1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m */,
 				944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */,
 				944DBF9218EE9B7100FD5906 /* RYRootBlurViewManager.m */,
+				94F1051A1A3ABCCF006BCC2A /* RYBaseModel.h */,
+				94F1051B1A3ABCCF006BCC2A /* RYBaseModel.m */,
 				94487341171C057E00EB3569 /* Supporting Files */,
 			);
 			path = RYUtils;
@@ -206,6 +212,7 @@
 			files = (
 				9448735E171C05DE00EB3569 /* NSDate+RYAdditions.h in Headers */,
 				94E8811B18E40222003EB0C2 /* UIImage+RYUtilities.h in Headers */,
+				94F1051C1A3ABCCF006BCC2A /* RYBaseModel.h in Headers */,
 				94487360171C05DE00EB3569 /* UIView+RYUtilities.h in Headers */,
 				94487362171C05DE00EB3569 /* RYAsynImageView.h in Headers */,
 				94487366171C05DE00EB3569 /* RYAppBackgroundConfiger.h in Headers */,
@@ -305,6 +312,7 @@
 				9438D1DF1843233000B3BC61 /* UIImage+RYScreenShot.m in Sources */,
 				944A84B21744C55C00D9DF9D /* RYHUDManager.m in Sources */,
 				940F773617866D5700212A27 /* RYDownloader.m in Sources */,
+				94F1051D1A3ABCCF006BCC2A /* RYBaseModel.m in Sources */,
 				949B3DED1A3A810B008F4D38 /* UIImage+RYAssetLaunchImage.m in Sources */,
 				940F773817866D5700212A27 /* RYDownloaderManager.m in Sources */,
 				940F774017866D6A00212A27 /* RYMediaPicker.m in Sources */,

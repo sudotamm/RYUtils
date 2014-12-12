@@ -107,6 +107,8 @@
     - 移除计算字符串高度过期方法的使用
  v4.0 2014-12-12
     - 加入获取应用启动图/Icon的category
+ v4.1 2014-12-13
+    - 加入RYBaseModel转换json为model的类型处理
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -132,5 +134,6 @@
 #import "RYRootBlurViewManager.h"
 #import "NSObject+RYPropertyList.h"
 #import "UIImage+RYAssetLaunchImage.h"
+#import "RYBaseModel.h"
 
 #endif
