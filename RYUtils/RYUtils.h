@@ -131,5 +131,6 @@
 #import "UIImage+RYUtilities.h"
 #import "RYRootBlurViewManager.h"
 #import "NSObject+RYPropertyList.h"
+#import "UIImage+RYAssetLaunchImage.h"
 
 #endif
