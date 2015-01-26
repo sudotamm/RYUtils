@@ -109,6 +109,8 @@
     - 加入获取应用启动图/Icon的category
  v4.1 2014-12-13
     - 加入RYBaseModel转换json为model的类型处理
+ v4.1.1 2015-01-26
+    - RYCommonMethods加入固定宽度多行文字的高度计算方法
  */
 
 #ifndef RYUtils_RYUtils_h

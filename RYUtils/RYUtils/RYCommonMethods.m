@@ -66,6 +66,20 @@
     }
 }
 
++ (CGFloat)measureHeightForText:(NSString *)text havingWidth:(CGFloat)widthValue andFont:(UIFont *)font
+{
+    if (text.length > 0)
+    {
+        CGRect frame = [text boundingRectWithSize:CGSizeMake(widthValue, CGFLOAT_MAX)
+                                          options:NSStringDrawingUsesLineFragmentOrigin
+                                       attributes:@{NSFontAttributeName:font}
+                                          context:nil];
+        return ceilf(frame.size.height);
+    }
+    else
+        return 0;
+}
+
 //唯一识别号
 + (NSString *)generateUniqueString
 {
