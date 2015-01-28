@@ -59,7 +59,7 @@
 	post方式与server交互
 	@param urlStr 请求地址
 	@param params 请求参数
-	@param contentType 请求的Content-Type， 如application/x-www-form-urlencoded
+	@param contentType 请求的Content-Type， 如application/x-www-form-urlencoded或application/json
 	@param receiver 接受callback的对象
 	@param purpose downloader的purpose
  */

@@ -204,12 +204,17 @@
     NSString *realString = nil;
     if([contentType rangeOfString:@"json"].length > 0)
     {
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
+        if(params && params.allKeys.count != 0)
+        {
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
 #if ! __has_feature(objc_arc)
-        realString = [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
+            realString = [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
 #else
-        realString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            realString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 #endif
+        }
+        else
+            realString = @"";
     }
     else
     {

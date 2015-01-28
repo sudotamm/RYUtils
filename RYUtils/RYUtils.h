@@ -111,6 +111,8 @@
     - 加入RYBaseModel转换json为model的类型处理
  v4.1.1 2015-01-26
     - RYCommonMethods加入固定宽度多行文字的高度计算方法
+ v4.1.2 2015-01-28
+    - RYDownloadManager 修复post请求（json）参数为nil时crash的bug
  */
 
 #ifndef RYUtils_RYUtils_h
