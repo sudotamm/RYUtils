@@ -22,6 +22,9 @@
 
 + (UIImage *) screenShotForScrollView:(UIScrollView *)scrollView
 {
+    if(scrollView.contentSize.height <= 0)
+        return nil;
+    
     UIImage* image = nil;
     
     UIGraphicsBeginImageContext(scrollView.contentSize);
