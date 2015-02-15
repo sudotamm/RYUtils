@@ -119,6 +119,8 @@
     - UIImage+RYScreenShot 修复scrollview截图，content高度为0时出现异常提示的问题
  v4.1.4 2015-02-15
     - RYCommonMethods 加入生成二维码图片的方法
+ v4.1.5 2015-02-15
+ - RYCommonMethods 无损放大生成的二维码图片
  */
 
 #ifndef RYUtils_RYUtils_h

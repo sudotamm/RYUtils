@@ -22,10 +22,35 @@
     [qrFilter setValue:stringData forKey:@"inputMessage"];
     [qrFilter setValue:@"M" forKey:@"inputCorrectionLevel"];
     
-    // Send the image back
-    CIImage *ciImg = qrFilter.outputImage;
-    UIImage *qrImage = [UIImage imageWithCIImage:ciImg];
-    return qrImage;
+    /**
+     ，根據CIImage結果生成的UIImage對象已經可以顯示，但這裡直接顯示的話有一個問題，原始的二維碼是以每個塊一個像素的單位來產生的，結果將是一個非常小的二維碼圖片，用設備去識別講非常困難。但如果我們直接去縮放這個UIImage的話，結果將會變非常模糊。
+     */
+    CIImage *ciImage = [qrFilter outputImage];
+    
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    CGImageRef cgImage = [context createCGImage:ciImage
+                          
+                                       fromRect:[ciImage extent]];
+    
+    UIImage *image = [UIImage imageWithCGImage:cgImage];
+    
+    /**
+     所以我們在最後我們使用了CoreGraphic中CGContextSetInterpolationQuality的kCGInterpolationNone來進行無損的點整縮放，獲得最終放大15倍以後的清晰二維碼圖像并設置到界面中的UIImageView中。
+     */
+    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * 15, image.size.height * 15));
+    
+    CGContextRef resizeContext = UIGraphicsGetCurrentContext();
+    
+    CGContextSetInterpolationQuality(resizeContext, kCGInterpolationNone);
+    
+    [image drawInRect:CGRectMake(0, 0, image.size.width * 15, image.size.height * 15)];
+    
+    UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return resizedImage;
 }
 
 + (CGFloat)measureHeightOfUITextView:(UITextView *)textView
