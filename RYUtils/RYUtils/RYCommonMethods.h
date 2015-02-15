@@ -65,4 +65,13 @@
 	@returns 返回加密后的字符串
  */
 + (NSString *)md5String:(NSString *)baseString;
+
+/**
+ *  生成QRImage - 二维码图片 - 用AVFoundation就可以decode
+ *
+ *  @param qrString 需要生成的字符串（支持中英文）
+ *
+ *  @return 二维码图片
+ */
++ (UIImage *)qrImageForString:(NSString *)qrString;
 @end

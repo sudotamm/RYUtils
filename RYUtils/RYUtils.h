@@ -115,6 +115,8 @@
     - RYDownloadManager 修复post请求（json）参数为nil时crash的bug
  v4.1.3 2015-02-12
     - UIImage+RYScreenShot 修复scrollview截图，content高度为0时出现异常提示的问题
+ v4.1.4 2015-02-15
+    - RYCommonMethods 加入生成二维码图片的方法
  */
 
 #ifndef RYUtils_RYUtils_h
