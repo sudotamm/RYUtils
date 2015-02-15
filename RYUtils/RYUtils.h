@@ -8,10 +8,12 @@
 
 /*
     必要的denpendencies
-    UIView+RYUtilities - QuartzCore.framework
-    RYMediaPicker      - AssetsLibrary.framework
-    RYMediaPicker      - CoreLocation.framework
-    UIImage+RYBlurGlass   - Accelerate.framework
+    UIView+RYUtilities      - QuartzCore.framework
+    RYMediaPicker           - AssetsLibrary.framework
+    RYMediaPicker           - CoreLocation.framework
+    UIImage+RYBlurGlass     - Accelerate.framework
+    RYCommonMethods+QRImage - CoreImage.framework
+ 
  版本管理：
  v1.0 
     - 添加基本常用库
