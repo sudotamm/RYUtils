@@ -120,7 +120,9 @@
  v4.1.4 2015-02-15
     - RYCommonMethods 加入生成二维码图片的方法
  v4.1.5 2015-02-15
- - RYCommonMethods 无损放大生成的二维码图片
+    - RYCommonMethods 无损放大生成的二维码图片
+ v4.1.6 2015-02-26
+    - RYAsynImageView 加入忽略缓存继续下载图片处理
  */
 
 #ifndef RYUtils_RYUtils_h

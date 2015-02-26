@@ -24,6 +24,7 @@
 @synthesize placeholderName,cacheDir;
 @synthesize forYulong;
 @synthesize originalFrame;
+@synthesize ignoreCache;
 
 #pragma mark - UIView methods
 - (id)initWithFrame:(CGRect)frame
@@ -162,6 +163,21 @@
         if(self.shouldResize)
             [self resizeSelfWithImage:img];
         self.image = img;
+        if(self.ignoreCache)
+        {
+            RYImageDownloader *d = [[RYImageDownloader alloc] init];
+            d.purpose = imagePath;
+            d.delegate = self;
+            self.aysnLoader = d;
+            
+            NSString *realUrl = url;
+//            if(forYulong)
+//                realUrl = [[ylAppManager sharedAppManager] getURL:url];
+            [self.aysnLoader startDownloadWithURL:realUrl];
+#if ! __has_feature(objc_arc)
+            [d release];
+#endif
+        }
     }
     else
     {

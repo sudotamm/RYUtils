@@ -29,8 +29,20 @@
  */
 @property (nonatomic, assign) BOOL shouldResize;
 @property (nonatomic, assign) CGRect originalFrame;
+
 //使用誉隆加密地址 - 使用时需要去掉aysnLoadImageWithUrl中ylAppmManager的注释
 @property (nonatomic, assign) BOOL forYulong;
+
+/**
+ *  是否忽略本地缓存 - 默认为否
+ *  - 如果已经存在缓存时：
+ *      YES - 忽略， 使用缓存作为placeholder，同时继续下载图片，完成后替换
+ *      NO - 不忽略，使用缓存作图片，不继续下载
+ *  - 如果不存在图片：
+ *      忽略该属性值，使用placeholder，同时继续下载图片，完成后替换
+ */
+@property (nonatomic, assign) BOOL ignoreCache;
+
 //占位图名称
 @property (nonatomic, copy) NSString *placeholderName;
 
