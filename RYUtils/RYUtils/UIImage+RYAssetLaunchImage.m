@@ -52,7 +52,16 @@ static NSString * const kAssetImageSizeFormatString						= @"{%.0f,%.0f}";
         [imageNameString appendString:kAssetImageiOS7Prefix];
     }
     if (scale >= kAssetImage6PlusScale || isiPad) {
-        NSString *orientationString = portrait ? kAssetImagePortraitString : kAssetImageLandscapeString;
+        NSString *orientationString = nil;
+        if(scale == 3 && (screenHeight == 375 || screenHeight == 667))
+        {
+            //非iphone6 plus 放大显示模式
+            orientationString = @"";
+        }
+        else
+        {
+            orientationString = portrait ? kAssetImagePortraitString : kAssetImageLandscapeString;
+        }
         [imageNameString appendString:orientationString];
     }
     
@@ -60,7 +69,16 @@ static NSString * const kAssetImageSizeFormatString						= @"{%.0f,%.0f}";
         [imageNameString appendFormat:kAssetImageHeightFormatString, screenHeight];
     }
     if (scale > 1) {
-        [imageNameString appendFormat:kAssetImageScaleFormatString, scale];
+        /*
+         iPhone6 Plus - 放大模式显示下，会使用iphone6的屏幕尺寸放大显示，应该读取LaunchImage-800-667h@2x
+        //LaunchImage-800-Portrait-667h@3x
+         */
+        if(scale == 3 && (screenHeight == 375 || screenHeight == 667))
+        {
+            [imageNameString appendFormat:kAssetImageScaleFormatString, 2.0];
+        }
+        else
+            [imageNameString appendFormat:kAssetImageScaleFormatString, scale];
     }
     if (isiPad) {
         [imageNameString appendString:kAssetImageiPadPostfix];
