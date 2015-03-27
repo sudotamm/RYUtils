@@ -73,6 +73,7 @@
     if(self = [super init])
     {
         blurView = [[RYRootBlurView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         blurView.backgroundColor = [UIColor clearColor];
         [[[UIApplication sharedApplication] keyWindow] addSubview:blurView];
         blurView.alpha = 0;

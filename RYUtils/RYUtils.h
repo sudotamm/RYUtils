@@ -125,6 +125,8 @@
     - RYAsynImageView 加入忽略缓存继续下载图片处理
  v4.1.7 2015-03-24
     - UIImage+RYAssetLaunchImage 修复iPhone6 Plus放大显示模式获取iPhone6 启动图失败的问题
+ v4.1.7 2015-03-27
+    - RYRootBlurViewManager 修复横屏时blurView点击区域不正确的问题
  */
 
 #ifndef RYUtils_RYUtils_h
