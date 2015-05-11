@@ -12,9 +12,10 @@ typedef enum
 {
     kDownloadWaiting = 0,           //等待下载
     kDownloading = 1,               //正在下载
-    kDownloadSucceed = 2,           //下载成功
-    kDownloadFailed = 3,            //下载失败
-    kDownloadCanceled = 4           //下载取消
+    kDownloadingHandling = 2,       //下载已返回，处于回调处理中
+    kDownloadSucceed = 3,           //下载成功
+    kDownloadFailed = 4,            //下载失败
+    kDownloadCanceled = 5           //下载取消
 }DownloaderStatus;
 
 @protocol RYDownloaderDelegate;

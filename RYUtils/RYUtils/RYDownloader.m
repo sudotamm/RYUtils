@@ -50,6 +50,7 @@
     self.theConnection = nil;
     self.purpose = nil;
     self.urlRequest = nil;
+    self.delegate = nil;
 }
 
 #pragma mark - Public methods
@@ -106,6 +107,7 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    self.status = kDownloadingHandling;
     if([delegate respondsToSelector:@selector(downloader:didFinishWithError:)])
         [delegate downloader:self didFinishWithError:[NSString stringWithFormat:@"%@",error]];
     [self clearData];
@@ -115,6 +117,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    self.status = kDownloadingHandling;
     if([delegate respondsToSelector:@selector(downloader:completeWithNSData:)])
         [delegate downloader:self completeWithNSData:responseData];
     [self clearData];

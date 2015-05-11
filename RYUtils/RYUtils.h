@@ -127,6 +127,8 @@
     - UIImage+RYAssetLaunchImage 修复iPhone6 Plus放大显示模式获取iPhone6 启动图失败的问题
  v4.1.7 2015-03-27
     - RYRootBlurViewManager 修复横屏时blurView点击区域不正确的问题
+ v4.1.8 2015-05-11
+    - RYDownloader 修复下载返回处于回调中的downloader重新下载时，reuse该downloader导致回调不正常的bug
  */
 
 #ifndef RYUtils_RYUtils_h
