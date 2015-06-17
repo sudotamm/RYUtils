@@ -37,6 +37,17 @@
 + (CGFloat)measureHeightForText:(NSString *)text havingWidth:(CGFloat)widthValue andFont:(UIFont *)font;
 
 /**
+ *  该方法用于计算文字在固定高度下得动态宽度，使用于iOS7.0及以上
+ *
+ *  @param text       需要计算的文字，如果为空，则宽度返回0
+ *  @param heightValue 固定高度
+ *  @param font       字体
+ *
+ *  @return 计算后的文字宽度
+ */
++ (CGFloat)measureWidthForText:(NSString *)text havingHeight:(CGFloat)heightValue andFont:(UIFont *)font;
+
+/**
  获取唯一识别字符串
  @returns 唯一识别字符串
  */

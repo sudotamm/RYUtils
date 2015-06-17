@@ -129,6 +129,8 @@
     - RYRootBlurViewManager 修复横屏时blurView点击区域不正确的问题
  v4.1.8 2015-05-11
     - RYDownloader 修复下载返回处于回调中的downloader重新下载时，reuse该downloader导致回调不正常的bug
+ v4.1.9 2015-06-17
+    - RYCommonMethods 加入计算文字宽度的方法
  */
 
 #ifndef RYUtils_RYUtils_h
