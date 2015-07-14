@@ -131,6 +131,8 @@
     - RYDownloader 修复下载返回处于回调中的downloader重新下载时，reuse该downloader导致回调不正常的bug
  v4.1.9 2015-06-17
     - RYCommonMethods 加入计算文字宽度的方法
+ v4.2 2015-07-14
+    - RYBaseModel 加入xml数据源解析Obj的方法
  */
 
 #ifndef RYUtils_RYUtils_h

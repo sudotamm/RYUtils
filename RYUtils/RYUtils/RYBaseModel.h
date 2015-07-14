@@ -11,5 +11,6 @@
 @interface RYBaseModel : NSObject
 
 - (id)initWithRYDict:(NSDictionary *)dict;
+- (id)initWithRYXMLDict:(NSDictionary *)dict;
 
 @end
