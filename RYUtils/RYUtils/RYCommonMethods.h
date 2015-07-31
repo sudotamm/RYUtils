@@ -85,4 +85,18 @@
  *  @return 二维码图片
  */
 + (UIImage *)qrImageForString:(NSString *)qrString;
+
+/**
+ *  获取应用名称
+ *
+ *  @return 返回应用info.plist Bundle Display Name值
+ */
++ (NSString *)appBundleDispalyName;
+
+/**
+ *  获取应用名称
+ *
+ *  @return 返回应用info.plist Bundle Version值
+ */
++ (NSString *)appBundleVersion;
 @end

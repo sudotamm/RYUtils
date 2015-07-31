@@ -312,4 +312,14 @@
 #endif
 }
 
++ (NSString *)appBundleDispalyName
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+}
+
++ (NSString *)appBundleVersion
+{
+    return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+}
+
 @end

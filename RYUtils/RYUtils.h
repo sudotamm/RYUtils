@@ -133,6 +133,8 @@
     - RYCommonMethods 加入计算文字宽度的方法
  v4.2 2015-07-14
     - RYBaseModel 加入xml数据源解析Obj的方法
+ v4.2.1 2015-07-31
+    - RYCommonMethods 加入应用名称版本号获取方法
  */
 
 #ifndef RYUtils_RYUtils_h
