@@ -137,6 +137,8 @@
     - RYCommonMethods 加入应用名称版本号获取方法
  v4.2.2 2015-08-26
     - UIImage+RYScreenShot 提升截屏清晰度
+ v4.2.3 2015-08-26
+    - UIImage+RYScreenShot 截屏可以透明
  */
 
 #ifndef RYUtils_RYUtils_h
