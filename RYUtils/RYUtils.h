@@ -135,6 +135,8 @@
     - RYBaseModel 加入xml数据源解析Obj的方法
  v4.2.1 2015-07-31
     - RYCommonMethods 加入应用名称版本号获取方法
+ v4.2.2 2015-08-26
+    - UIImage+RYScreenShot 提升截屏清晰度
  */
 
 #ifndef RYUtils_RYUtils_h

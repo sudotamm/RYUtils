@@ -13,7 +13,7 @@
 
 + (UIImage *)screenShotForView:(UIView *)shotView
 {
-    UIGraphicsBeginImageContext(shotView.frame.size);
+    UIGraphicsBeginImageContextWithOptions(shotView.frame.size, YES, [UIScreen mainScreen].scale);
     [shotView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *shareImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -27,7 +27,7 @@
     
     UIImage* image = nil;
     
-    UIGraphicsBeginImageContext(scrollView.contentSize);
+    UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, YES, [UIScreen mainScreen].scale);
     {
         CGPoint savedContentOffset = scrollView.contentOffset;
         CGRect savedFrame = scrollView.frame;
