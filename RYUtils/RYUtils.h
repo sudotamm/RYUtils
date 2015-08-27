@@ -139,6 +139,8 @@
     - UIImage+RYScreenShot 提升截屏清晰度
  v4.2.3 2015-08-26
     - UIImage+RYScreenShot 截屏可以透明
+ v4.2.4 2015-08-27
+    - RYReverseLocation 解决block类型冲突的问题
  */
 
 #ifndef RYUtils_RYUtils_h

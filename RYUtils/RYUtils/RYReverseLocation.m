@@ -68,7 +68,7 @@
 }
 
 #pragma mark - Public methods
-- (void)updateLocationOnCompletion:(CompletionBlock)completion error:(ErrorBlock)error
+- (void)updateLocationOnCompletion:(RYCompletionBlock)completion error:(RYErrorBlock)error
 {
     self.completionBlock = completion;
     self.errorBlock = error;

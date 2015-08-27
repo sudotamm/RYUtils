@@ -14,8 +14,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-typedef void (^CompletionBlock)(CLLocation *location);
-typedef void (^ErrorBlock)(NSString *error);
+typedef void (^RYCompletionBlock)(CLLocation *location);
+typedef void (^RYErrorBlock)(NSString *error);
 
 typedef void (^ReverseCompletionBlock)(NSString *address);
 typedef void (^ReverseErrorBlock)(NSString *error);
@@ -29,8 +29,8 @@ typedef void (^ReverseErrorBlock)(NSString *error);
 #endif
 @property (nonatomic, copy) NSString *address;                  //保存地址解析成功后的位置
 //block 使用,简化回调
-@property (nonatomic, copy) CompletionBlock completionBlock;                //定位成功后的回调
-@property (nonatomic, copy) ErrorBlock errorBlock;                          //定位失败后的回调
+@property (nonatomic, copy) RYCompletionBlock completionBlock;                //定位成功后的回调
+@property (nonatomic, copy) RYErrorBlock errorBlock;                          //定位失败后的回调
 
 @property (nonatomic, copy) ReverseCompletionBlock reverseCompletionBlock;  //解析成功后的回调
 @property (nonatomic, copy) ReverseErrorBlock reverseErrorBlock;            //解析失败后的回调
@@ -42,7 +42,7 @@ typedef void (^ReverseErrorBlock)(NSString *error);
 	@param completion 定位成功之后返回用户的经纬度
 	@param error 定位失败则返回失败信息
  */
-- (void)updateLocationOnCompletion:(CompletionBlock)completion error:(ErrorBlock)error;
+- (void)updateLocationOnCompletion:(RYCompletionBlock)completion error:(RYErrorBlock)error;
 
 
 /**
