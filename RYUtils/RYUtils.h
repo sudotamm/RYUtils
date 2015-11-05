@@ -11,7 +11,7 @@
     UIView+RYUtilities      - QuartzCore.framework
     RYMediaPicker           - AssetsLibrary.framework
     RYMediaPicker           - CoreLocation.framework
-    UIImage+RYBlurGlass     - Accelerate.framework
+    UIImage+RYImageEffects  - Accelerate.framework
     RYCommonMethods+QRImage - CoreImage.framework
  
  版本管理：
@@ -141,6 +141,9 @@
     - UIImage+RYScreenShot 截屏可以透明
  v4.2.4 2015-08-27
     - RYReverseLocation 解决block类型冲突的问题
+ v4.2.5 2015-11-05
+    - 移除第三方的图片模糊处理方法：UIImage+RYBlurImage
+    - 添加Apple提供的图片模糊处理方法：UIImage+RYImageEffects
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -157,7 +160,7 @@
 #import "RYReverseLocation.h"
 #import "UIDevice+RYUDID.h" 
 #import "NSArray+RYLocationTransform.h"
-#import "UIImage+RYBlurGlass.h"
+#import "UIImage+RYImageEffects.h"
 #import "UIImage+RYScreenShot.h"
 #import "RYXMLReader.h"
 #import "RYCommonMethods.h"
