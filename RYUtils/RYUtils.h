@@ -144,6 +144,10 @@
  v4.2.5 2015-11-05
     - 移除第三方的图片模糊处理方法：UIImage+RYBlurImage
     - 添加Apple提供的图片模糊处理方法：UIImage+RYImageEffects
+ v4.2.6 2015-11-17
+    - RYReverseLocation
+    - 修复第一次定位出现“未开启定位”的错误提示问题
+    - 修复定位后stop前出现多次回调的问题
  */
 
 #ifndef RYUtils_RYUtils_h

@@ -33,7 +33,6 @@
     if(self = [super init])
     {
         locationManager = [[CLLocationManager alloc] init];
-        [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         //Set the filter to 200 meters
         locationManager.distanceFilter = 200.f;
@@ -72,7 +71,7 @@
 {
     self.completionBlock = completion;
     self.errorBlock = error;
-    
+    locationManager.delegate = self;
     //iOS定位提示
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
     {
@@ -93,15 +92,7 @@
             [locationManager requestWhenInUseAuthorization];
         }
     }
-    
-    if([CLLocationManager locationServicesEnabled] && ([CLLocationManager authorizationStatus] >= kCLAuthorizationStatusAuthorized))
-    {
-        [locationManager startUpdatingLocation];
-    }
-    else
-    {
-        self.errorBlock(@"未打开定位服务.");
-    }
+    [locationManager startUpdatingLocation];
 }
 
 - (void)reverseAddressFromLocation:(CLLocation *)location
@@ -115,15 +106,16 @@
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError*error){
         if(error)
         {
-            NSLog(@"地址解析错误：%@",error.description);
+//            NSLog(@"地址解析错误.");
             self.reverseErrorBlock(@"地址解析错误.");
         }
         else
         {
+//            NSLog(@"地址解析成功.");
             for(CLPlacemark *placemark in placemarks)
             {
                 //            self.fileDes = [NSString stringWithFormat:@"City:%@ Country:%@ CountryCode:%@ FormattedAddressLines:%@  Name:%@ State:%@ Street:@ SubLocality:%@ Thoroughfare:%@",[placemark.addressDictionary objectForKey:@"City"],[placemark.addressDictionary objectForKey:@"Country"],[placemark.addressDictionary objectForKey:@"CountryCode"],[placemark.addressDictionary objectForKey:@"Name"],[placemark.addressDictionary objectForKey:@"State"],[placemark.addressDictionary objectForKey:@"Street"],[placemark.addressDictionary objectForKey:@"SubLocality"],[placemark.addressDictionary objectForKey:@"Thoroughfare"]];
-                self.address = [NSString stringWithFormat:@"%@",[placemark.addressDictionary objectForKey:@"Name"]];
+                self.address = [NSString stringWithFormat:@"%@",[placemark.addressDictionary objectForKey:@"City"]];
                 self.reverseCompletionBlock(self.address);
             }
         }
@@ -139,8 +131,10 @@
 	didUpdateToLocation:(CLLocation *)newLocation
 		   fromLocation:(CLLocation *)oldLocation
 {
-	//Request for new annotations
-    [manager stopUpdatingLocation];
+//    NSLog(@"定位成功.");
+    //Request for new annotations
+    locationManager.delegate = nil;     //解决定位在stop之前多次返回的问题
+    [manager stopUpdatingLocation];     //停止根据距离移动多次轮询定位
     self.curLocation = newLocation;
     self.completionBlock(self.curLocation);
 }
@@ -148,8 +142,14 @@
 - (void)locationManager:(CLLocationManager *)manager
 	   didFailWithError:(NSError *)error
 {
-    [manager stopUpdatingLocation];
-    NSLog(@"定位错误：%@",error.description);
-    self.errorBlock(@"定位错误.");
+//    NSLog(@"定位错误.");
+    locationManager.delegate = nil;     //解决定位在stop之前多次返回的问题
+    [manager stopUpdatingLocation];     //停止根据距离移动多次轮询定位
+    if(![CLLocationManager locationServicesEnabled] || ([CLLocationManager authorizationStatus] <= kCLAuthorizationStatusDenied))
+    {
+        self.errorBlock(@"未打开定位服务.");
+    }
+    else
+        self.errorBlock(@"定位错误.");
 }
 @end
