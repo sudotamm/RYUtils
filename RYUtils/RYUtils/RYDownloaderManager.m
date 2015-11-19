@@ -238,14 +238,14 @@
 }
 
 - (void)uploadFileByPostWithURLString:(NSString *)urlStr
-                            postParams:(NSMutableDictionary *)params
+                           postParams:(NSMutableDictionary *)params
                           contentType:(NSString *)contentType
                              fileData:(NSData *)data
                              fileType:(NSString *)fileType
-                             fileName:(NSString *)fileName
                               fileKey:(NSString *)fileKey
+                             fileName:(NSString *)fileName
                              delegate:(id<RYDownloaderDelegate>)receiver
-                              purpose:(NSString *)purpose
+                              purpose:(NSString *)purpose;
 {
     //根据url初始化request
 #if ! __has_feature(objc_arc)

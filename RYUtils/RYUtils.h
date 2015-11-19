@@ -148,6 +148,8 @@
     - RYReverseLocation
     - 修复第一次定位出现“未开启定位”的错误提示问题
     - 修复定位后stop前出现多次回调的问题
+ v4.2.7 2015-11-19
+    - RYDownloaderManager 加入表单文件上传的文件key和文件名使用注释
  */
 
 #ifndef RYUtils_RYUtils_h

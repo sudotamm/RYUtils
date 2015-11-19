@@ -86,8 +86,8 @@
 	@param contentType 请求content-Type，如multipart/form-data
 	@param data 上传文件二进制流
 	@param fileType 上传文件类型，如image/jpg
-	@param fileName 上传文件名称
-	@param fileKey 上传文件对应的key
+ 	@param fileKey 上传文件对应的key - 服务端解析图片字段的key
+	@param fileName 上传文件名称     - 服务端解析图片后的文件名
 	@param receiver 接受callback的对象
 	@param purpose downloader的purpose
  */
@@ -96,8 +96,8 @@
                           contentType:(NSString *)contentType
                              fileData:(NSData *)data
                              fileType:(NSString *)fileType
-                             fileName:(NSString *)fileName
                               fileKey:(NSString *)fileKey
+                             fileName:(NSString *)fileName
                              delegate:(id)receiver
                               purpose:(NSString *)purpose;
 
