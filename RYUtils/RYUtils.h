@@ -150,6 +150,8 @@
     - 修复定位后stop前出现多次回调的问题
  v4.2.7 2015-11-19
     - RYDownloaderManager 加入表单文件上传的文件key和文件名使用注释
+ v4.2.8 2015-11-23
+    - NSDate+RYAdditions 加入日期字符串相互转换时的nil处理
  */
 
 #ifndef RYUtils_RYUtils_h

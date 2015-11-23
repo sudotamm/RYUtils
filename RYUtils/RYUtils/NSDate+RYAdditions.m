@@ -12,6 +12,9 @@
 // convert string to date by given format
 + (NSDate *)dateFromStringByFormat:(NSString *)format string:(NSString *)string
 {
+    if(string.length == 0)
+        return nil;
+    
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];
 	[dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
@@ -24,6 +27,9 @@
 // covert date to string by given format
 + (NSString *)dateToStringByFormat:(NSString *)format date:(NSDate *)date
 {
+    if(nil == date)
+        return nil;
+    
      NSDateFormatter*dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];
 	[dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
