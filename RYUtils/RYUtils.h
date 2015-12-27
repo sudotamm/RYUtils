@@ -152,6 +152,8 @@
     - RYDownloaderManager 加入表单文件上传的文件key和文件名使用注释
  v4.2.8 2015-11-23
     - NSDate+RYAdditions 加入日期字符串相互转换时的nil处理
+ v4.2.9 2015-12-27
+    - RYCommonMethods 加入自定义全局NavigationBar的字体大小和颜色方法
  */
 
 #ifndef RYUtils_RYUtils_h

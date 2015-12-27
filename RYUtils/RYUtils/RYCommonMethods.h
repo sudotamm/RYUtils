@@ -99,4 +99,13 @@
  *  @return 返回应用info.plist Bundle Version值
  */
 + (NSString *)appBundleVersion;
+
+/**
+ *  自定义全局NavigationBar的字体大小和颜色
+ *  @param fontSize    字体大小
+ *  @param fontColor   字体颜色
+ *
+ *  @return void
+ */
++ (void)customNaviBarItemWithFontSize:(CGFloat)fontSize fontColor:(UIColor *)fontColor;
 @end

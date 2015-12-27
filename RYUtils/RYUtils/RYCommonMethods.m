@@ -322,4 +322,12 @@
     return [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
++ (void)customNaviBarItemWithFontSize:(CGFloat)fontSize fontColor:(UIColor *)fontColor
+{
+    [[UIBarButtonItem appearanceWhenContainedIn: [UINavigationBar class], nil]
+     setTitleTextAttributes:@{
+                              NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
+                              NSForegroundColorAttributeName: fontColor
+                              } forState:UIControlStateNormal];
+}
 @end
