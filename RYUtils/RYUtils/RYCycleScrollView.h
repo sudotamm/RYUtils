@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kRYCycleScrollViewOffsetWidth [UIScreen mainScreen].bounds.size.width
+
 @protocol RYCycleScrollViewDelegate;
 
 @interface RYCycleScrollView : UIScrollView<UIScrollViewDelegate>

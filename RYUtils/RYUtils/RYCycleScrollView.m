@@ -57,8 +57,9 @@
             RYAsynImageView *asynImgView = [[RYAsynImageView alloc] init];
             CGRect rect = self.bounds;
             rect.size.width = self.frame.size.width;
-            rect.origin.x = index*self.frame.size.width;
+            rect.origin.x = index*kRYCycleScrollViewOffsetWidth;
             asynImgView.frame = rect;
+            asynImgView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
             //加载图片
             asynImgView.cacheDir = cacheDir;
 //            asynImgView.forYulong = YES;

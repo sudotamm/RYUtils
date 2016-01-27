@@ -154,6 +154,8 @@
     - NSDate+RYAdditions 加入日期字符串相互转换时的nil处理
  v4.2.9 2015-12-27
     - RYCommonMethods 加入自定义全局NavigationBar的字体大小和颜色方法
+ v4.2.10 2016-01-27
+    - RYCycleScrollView 加入图片根据scrollview动态适配高度，固定滚动分页宽度
  */
 
 #ifndef RYUtils_RYUtils_h
