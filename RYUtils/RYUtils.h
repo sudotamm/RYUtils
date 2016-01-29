@@ -156,6 +156,8 @@
     - RYCommonMethods 加入自定义全局NavigationBar的字体大小和颜色方法
  v4.2.10 2016-01-27
     - RYCycleScrollView 加入图片根据scrollview动态适配高度，固定滚动分页宽度
+ v4.3.0 2016-01-29
+    - RYResponseManager 加入接口返回数据之后的统一验证处理
  */
 
 #ifndef RYUtils_RYUtils_h
@@ -182,5 +184,6 @@
 #import "NSObject+RYPropertyList.h"
 #import "UIImage+RYAssetLaunchImage.h"
 #import "RYBaseModel.h"
+#import "RYResponseManager.h"
 
 #endif
