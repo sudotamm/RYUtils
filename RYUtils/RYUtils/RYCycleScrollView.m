@@ -55,6 +55,8 @@
         {
             //设置frame
             RYAsynImageView *asynImgView = [[RYAsynImageView alloc] init];
+            asynImgView.contentMode = UIViewContentModeScaleAspectFill;
+            asynImgView.clipsToBounds = YES;
             CGRect rect = self.bounds;
             rect.size.width = self.frame.size.width;
             rect.origin.x = index*kRYCycleScrollViewOffsetWidth;

@@ -158,6 +158,8 @@
     - RYCycleScrollView 加入图片根据scrollview动态适配高度，固定滚动分页宽度
  v4.3.0 2016-01-29
     - RYResponseManager 加入接口返回数据之后的统一验证处理
+ v4.3.1 2016-03-03
+    - RYCycleScrollView 加入头图自适应处理
  */
 
 #ifndef RYUtils_RYUtils_h
