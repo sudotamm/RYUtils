@@ -160,6 +160,8 @@
     - RYResponseManager 加入接口返回数据之后的统一验证处理
  v4.3.1 2016-03-03
     - RYCycleScrollView 加入头图自适应处理
+ v4.3.2 2016-03-04
+    - RYDownloaderManager 加入get请求url编码处理
  */
 
 #ifndef RYUtils_RYUtils_h

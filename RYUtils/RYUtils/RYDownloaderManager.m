@@ -188,6 +188,7 @@
                              delegate:(id<RYDownloaderDelegate>)receiver
                               purpose:(NSString *)purpose
 {
+    urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:30.f];
     [self requestDataWithURLRequest:request delegate:receiver purpose:purpose];
 }
