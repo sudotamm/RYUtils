@@ -162,6 +162,8 @@
     - RYCycleScrollView 加入头图自适应处理
  v4.3.2 2016-03-04
     - RYDownloaderManager 加入get请求url编码处理
+ v4.3.3 2016-03-17
+    - RYCommonMethods 加入邮箱/手机号是否合法验证
  */
 
 #ifndef RYUtils_RYUtils_h

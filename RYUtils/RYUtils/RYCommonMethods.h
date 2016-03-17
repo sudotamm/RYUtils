@@ -108,4 +108,20 @@
  *  @return void
  */
 + (void)customNaviBarItemWithFontSize:(CGFloat)fontSize fontColor:(UIColor *)fontColor;
+
+/**
+ *  正则表达式判断字符串是否是合法email
+ *  @param email    邮箱
+ *
+ *  @return YES/NO
+ */
++ (BOOL)isValidateEmail:(NSString *)email;
+
+/**
+ *  正则表达式判断字符串是否是合法手机号
+ *  @param mobile    手机号
+ *
+ *  @return YES/NO
+ */
++ (BOOL)isValidateMobile:(NSString *)mobile;
 @end
