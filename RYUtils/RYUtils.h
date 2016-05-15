@@ -164,6 +164,9 @@
     - RYDownloaderManager 加入get请求url编码处理
  v4.3.3 2016-03-17
     - RYCommonMethods 加入邮箱/手机号是否合法验证
+ v4.3.4 2016-05-15
+    - 加入Readme和Liencese文件
+    - 导入Cocoapods管理
  */
 
 #ifndef RYUtils_RYUtils_h
