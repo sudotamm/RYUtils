@@ -94,7 +94,7 @@
 		94487357171C05DE00EB3569 /* RYImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYImageDownloader.m; sourceTree = "<group>"; };
 		94487358171C05DE00EB3569 /* RYAppBackgroundConfiger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYAppBackgroundConfiger.h; sourceTree = "<group>"; };
 		94487359171C05DE00EB3569 /* RYAppBackgroundConfiger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYAppBackgroundConfiger.m; sourceTree = "<group>"; };
-		94487368171C063300EB3569 /* RYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYUtils.h; sourceTree = SOURCE_ROOT; };
+		94487368171C063300EB3569 /* RYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RYUtils.h; path = RYUtils/RYUtils.h; sourceTree = SOURCE_ROOT; };
 		944A84AF1744C55C00D9DF9D /* RYHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYHUDManager.h; sourceTree = "<group>"; };
 		944A84B01744C55C00D9DF9D /* RYHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYHUDManager.m; sourceTree = "<group>"; };
 		944DBF9118EE9B7100FD5906 /* RYRootBlurViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYRootBlurViewManager.h; sourceTree = "<group>"; };

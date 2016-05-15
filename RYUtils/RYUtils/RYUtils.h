@@ -167,6 +167,8 @@
  v4.3.4 2016-05-15
     - 加入Readme和Liencese文件
     - 导入Cocoapods管理
+ v4.3.5 2016-05-15
+    - 调整RYUtils.h目录结构，供Cocoapods访问
  */
 
 #ifndef RYUtils_RYUtils_h
