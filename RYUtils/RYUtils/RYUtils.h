@@ -171,6 +171,8 @@
     - 调整RYUtils.h目录结构，供Cocoapods访问
  v4.3.6 2016-05-15
     - 调整RYUtils.h目录结构，供Cocoapods访问
+ v4.3.7 2016-05-24
+    - RYRootBlurViewManager加入contentView适配键盘高度处理
  */
 
 #ifndef RYUtils_RYUtils_h

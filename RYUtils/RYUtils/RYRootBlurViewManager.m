@@ -55,6 +55,9 @@
 @end
 
 @interface RYRootBlurViewManager()
+
+@property (nonatomic, assign) BOOL adaptKeyboard;
+
 #if ! __has_feature(objc_arc)
 @property (nonatomic, retain) RYRootBlurView *blurView;
 #else
@@ -72,6 +75,16 @@
 {
     if(self = [super init])
     {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillShow:)
+                                                     name:UIKeyboardWillShowNotification
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillHide:)
+                                                     name:UIKeyboardWillHideNotification
+                                                   object:nil];
+        
         blurView = [[RYRootBlurView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         blurView.backgroundColor = [UIColor clearColor];
@@ -91,18 +104,23 @@
     return manager;
 }
 
-#if ! __has_feature(objc_arc)
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+#if ! __has_feature(objc_arc)
     [blurView release];
     [super dealloc];
-}
 #endif
+}
 
 #pragma mark - Public methods
 
-- (void)showWithBlurImage:(UIImage *)image contentView:(UIView *)contentView position:(CGPoint)position
+- (void)showWithBlurImage:(UIImage *)image
+              contentView:(UIView *)contentView
+                 position:(CGPoint)position
+            adaptKeyboard:(BOOL)adapt
 {
+    self.adaptKeyboard = adapt;
     //替换当前的模糊底图
     self.blurView.blurBGImageView.image = image;
     //替换当前的contengview
@@ -190,5 +208,74 @@
     [self.blurView.contentView.layer addAnimation:animationGroup forKey:nil];
     
     self.blurView.alpha = 0;
+}
+
+#pragma mark - Keyboard methods
+-(void) keyboardWillShow:(NSNotification *)note{
+    if (self.blurView.alpha == 0 || self.adaptKeyboard == NO) {
+        return;
+    }
+    CGFloat keyboardBoundHeight = 0;
+    CGFloat windowHeight = [UIScreen mainScreen].bounds.size.height;
+    
+    // get keyboard size and loctaion
+    CGRect keyboardBounds;
+    [[note.userInfo valueForKey:UIKeyboardFrameEndUserInfoKey] getValue: &keyboardBounds];
+    NSNumber *duration = [note.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSNumber *curve = [note.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey];
+    
+    CGPoint center = self.blurView.contentView.center;
+    
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if([[UIScreen mainScreen] respondsToSelector:@selector(fixedCoordinateSpace)]) {
+        keyboardBounds = [[[UIScreen mainScreen] fixedCoordinateSpace] convertRect:keyboardBounds fromCoordinateSpace:[[UIScreen mainScreen] coordinateSpace]];
+    }
+    
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        keyboardBoundHeight = keyboardBounds.size.height;
+    } else if (UIInterfaceOrientationIsLandscape(orientation)) {
+        keyboardBoundHeight = keyboardBounds.size.width;
+    }
+    
+    center.y = floorf((windowHeight - keyboardBoundHeight) * 4/7);
+    
+    // animations settings
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:[duration doubleValue]?:0.1];
+    [UIView setAnimationCurve:[curve intValue]];
+    [UIView setAnimationDelegate:self];
+    
+    // set views with new info
+    self.blurView.contentView.center = center;
+    // commit animations
+    [UIView commitAnimations];
+}
+
+-(void) keyboardWillHide:(NSNotification *)note{
+    if (self.blurView.alpha == 0 || self.adaptKeyboard == NO) {
+        return;
+    }
+    CGFloat windowHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat windowWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    NSNumber *duration = [note.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSNumber *curve = [note.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey];
+    
+    CGPoint center = self.blurView.contentView.center;
+    center.y = windowHeight/2.f;
+    center.x = windowWidth/2.f;
+    
+    // animations settings
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationDuration:[duration doubleValue]];
+    [UIView setAnimationCurve:[curve intValue]];
+    
+    // set views with new info
+    self.blurView.contentView.center = center;
+    // commit animations
+    [UIView commitAnimations];
 }
 @end

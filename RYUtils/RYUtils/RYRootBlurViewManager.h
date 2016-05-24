@@ -28,7 +28,7 @@
 
  */
 
-@interface RYRootBlurViewManager : UIView
+@interface RYRootBlurViewManager : NSObject
 
 + (RYRootBlurViewManager *)sharedManger;
 
@@ -37,11 +37,13 @@
 	@param image 需要显示的view的底图（可加入模糊处理）
 	@param contentView 需要显示的内容view
     @param position 需要显示的内容view的位置，如果值是CGPointZero时，会居中显示
+    @param adapt 是否需要根据键盘动态调整contentView的位置，默认NO
 	@returns nil
  */
 - (void)showWithBlurImage:(UIImage *)image
               contentView:(UIView *)contentView
-                 position:(CGPoint)position;
+                 position:(CGPoint)position
+            adaptKeyboard:(BOOL)adapt;
 
 /**
 	使用抖动动画隐藏keywindow之上的覆盖view
