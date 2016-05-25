@@ -38,12 +38,14 @@
 	@param contentView 需要显示的内容view
     @param position 需要显示的内容view的位置，如果值是CGPointZero时，会居中显示
     @param adapt 是否需要根据键盘动态调整contentView的位置，默认NO
+    @param hide 点击空白区域是否需要隐藏contentView，默认NO
 	@returns nil
  */
 - (void)showWithBlurImage:(UIImage *)image
               contentView:(UIView *)contentView
                  position:(CGPoint)position
-            adaptKeyboard:(BOOL)adapt;
+            adaptKeyboard:(BOOL)adapt
+                touchHide:(BOOL)hide;
 
 /**
 	使用抖动动画隐藏keywindow之上的覆盖view

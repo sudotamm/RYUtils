@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIImageView *blurBGImageView;
 @property (nonatomic, strong) UIView *contentView;
 #endif
+@property (nonatomic, assign) BOOL touchHide;
 
 @end
 
@@ -49,7 +50,8 @@
 #pragma mark - UIResponder methods
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [[RYRootBlurViewManager sharedManger] hideBlurView];
+    if(self.touchHide)
+        [[RYRootBlurViewManager sharedManger] hideBlurView];
 }
 
 @end
@@ -119,7 +121,9 @@
               contentView:(UIView *)contentView
                  position:(CGPoint)position
             adaptKeyboard:(BOOL)adapt
+                touchHide:(BOOL)hide
 {
+    self.blurView.touchHide = hide;
     self.adaptKeyboard = adapt;
     //替换当前的模糊底图
     self.blurView.blurBGImageView.image = image;
