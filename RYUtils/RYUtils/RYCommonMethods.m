@@ -352,4 +352,13 @@
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
     return [phoneTest evaluateWithObject:mobile];
 }
+
++ (BOOL)isValidateString:(NSString *)validString
+{
+    if(validString.length == 0)
+        return NO;
+    NSString *validRegex = @"\\w{0,8}";
+    NSPredicate *validTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",validRegex];
+    return [validTest evaluateWithObject:validString];
+}
 @end

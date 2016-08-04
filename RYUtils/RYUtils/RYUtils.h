@@ -175,6 +175,10 @@
     - RYRootBlurViewManager加入contentView适配键盘高度处理
  v4.3.8 2016-05-24
     - RYRootBlurViewManager加入空白区域点击隐藏处理
+ v4.3.9 2016-08-04
+    - UIView动画加入过渡时间参数
+    - CommonMethods加入字符合法验证方法
+    - BaseModel加入Model转Dict方法
  */
 
 #ifndef RYUtils_RYUtils_h

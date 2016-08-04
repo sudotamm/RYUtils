@@ -74,6 +74,22 @@
  transtion.subtype = subtypes[random() % 4];
  
  */
+/**
+ *  UIView添加CATransition动画
+ *
+ *  @param type    动画类型
+ *  @param subtype 动画过渡方式
+ */
+
 - (void)addAnimationWithType:(NSString *)type subtype:(NSString *)subtype;
+
+/**
+ *  UIView添加CATransition动画
+ *
+ *  @param type     动画类型
+ *  @param subtype  动画过渡方式
+ *  @param duration 动画过渡时间
+ */
+- (void)addAnimationWithType:(NSString *)type subtype:(NSString *)subtype duration: (CGFloat)duration;
 
 @end

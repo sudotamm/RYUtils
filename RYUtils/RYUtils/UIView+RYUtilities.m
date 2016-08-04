@@ -153,4 +153,14 @@
     [self.layer addAnimation:transtion forKey:nil];
 }
 
+- (void)addAnimationWithType:(NSString *)type subtype:(NSString *)subtype duration: (CGFloat)duration
+{
+    CATransition *transtion = [CATransition animation];
+    transtion.duration = duration;
+    transtion.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transtion.type = type;
+    transtion.subtype = subtype;
+    [self.layer addAnimation:transtion forKey:nil];
+}
+
 @end

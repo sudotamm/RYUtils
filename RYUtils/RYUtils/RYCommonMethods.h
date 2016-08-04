@@ -124,4 +124,13 @@
  *  @return YES/NO
  */
 + (BOOL)isValidateMobile:(NSString *)mobile;
+
+/**
+ *  判断字符串是否含有非法字符（字符，emoji）
+ *
+ *  @param validString 需要验证的字符串
+ *
+ *  @return YES/NO
+ */
++ (BOOL)isValidateString:(NSString *)validString;
 @end
