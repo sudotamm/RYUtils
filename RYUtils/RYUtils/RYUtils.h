@@ -179,6 +179,8 @@
     - UIView动画加入过渡时间参数
     - CommonMethods加入字符合法验证方法
     - BaseModel加入Model转Dict方法
+ v.4.4.0 2016-10-18
+    - Copyright全部私有成Ryan
  */
 
 #ifndef RYUtils_RYUtils_h

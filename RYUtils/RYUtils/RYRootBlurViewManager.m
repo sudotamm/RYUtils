@@ -1,9 +1,9 @@
 //
 //  RYRootBlurViewManager.m
-//  iCityYangzhou
+//  RYUtils
 //
 //  Created by Ryan on 13-9-4.
-//  Copyright (c) 2013年 YuLong. All rights reserved.
+//  Copyright (c) 2013年 Ryan. All rights reserved.
 //
 
 #import "RYRootBlurViewManager.h"

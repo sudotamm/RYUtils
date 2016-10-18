@@ -1,6 +1,6 @@
 //
 //  RYMediaPicker.h
-//  NOAHWM
+//  RYUtils
 //
 //  Created by Ryan on 13-6-18.
 //  Copyright (c) 2013年 Ryan. All rights reserved.

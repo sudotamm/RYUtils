@@ -1,9 +1,9 @@
 //
 //  RYXMLReader.m
-//  p_yl_sz_ios
+//  RYUtils
 //
 //  Created by Ryan on 13-10-31.
-//  Copyright (c) 2013年 YuLong. All rights reserved.
+//  Copyright (c) 2013年 Ryan. All rights reserved.
 //
 
 #import "RYXMLReader.h"

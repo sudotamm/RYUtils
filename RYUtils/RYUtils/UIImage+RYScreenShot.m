@@ -1,6 +1,6 @@
 //
 //  UIImage+RYScreenShot.m
-//  SuZhouWeather
+//  RYUtils
 //
 //  Created by Ryan on 13-3-12.
 //  Copyright (c) 2013年 Ryan. All rights reserved.

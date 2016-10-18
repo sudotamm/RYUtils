@@ -1,9 +1,9 @@
 //
 //  RYCommonMethods.m
-//  p_yl_sz_ios
+//  RYUtils
 //
 //  Created by Ryan on 13-11-6.
-//  Copyright (c) 2013年 YuLong. All rights reserved.
+//  Copyright (c) 2013年 Ryan. All rights reserved.
 //
 
 #import "RYCommonMethods.h"
