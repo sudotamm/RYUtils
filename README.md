@@ -1,5 +1,5 @@
 # RYUtils
-Ryan Yuan 的私有库
+Ryan Yuan 的私有库， 自定义了图片异步下载及缓存，Model映射，全局Hud，Media资源获取，全局Popover，定位及解析等常用框架。
 
 Cocoapods集成方式：
 
