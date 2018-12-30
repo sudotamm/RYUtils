@@ -17,16 +17,16 @@
     将hud移到keywindow的最上层，如果view在hud移动之后再加入到keywindow中的话还是会背遮住！
  */
 
-@class MBProgressHUD;
+@class RYMBProgressHUD;
 
 @interface RYHUDManager : NSObject
 
 + (RYHUDManager *)sharedManager;
 
 #if ! __has_feature(objc_arc)
-@property (nonatomic, retain) MBProgressHUD *hud;
+@property (nonatomic, retain) RYMBProgressHUD *hud;
 #else
-@property (nonatomic, strong) MBProgressHUD *hud;
+@property (nonatomic, strong) RYMBProgressHUD *hud;
 #endif
 
 /**

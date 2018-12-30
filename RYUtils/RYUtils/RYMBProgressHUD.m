@@ -4,9 +4,9 @@
 // Created by Matej Bukovinski on 2.4.09.
 //
 
-#import "MBProgressHUD.h"
+#import "RYMBProgressHUD.h"
 
-@interface MBProgressHUD ()
+@interface RYMBProgressHUD ()
 
 - (void)hideUsingAnimation:(BOOL)animated;
 - (void)showUsingAnimation:(BOOL)animated;
@@ -41,7 +41,7 @@
 @end
 
 
-@implementation MBProgressHUD
+@implementation RYMBProgressHUD
 
 #pragma mark -
 #pragma mark Accessors
@@ -75,7 +75,7 @@
 
 @synthesize showStarted;
 
-- (void)setMode:(MBProgressHUDMode)newMode {
+- (void)setMode:(RYMBProgressHUDMode)newMode {
     // Dont change mode if it wasn't actually changed to prevent flickering
     
     /*Ryan - 2013/11/18
@@ -99,7 +99,7 @@
 	}
 }
 
-- (MBProgressHUDMode)mode {
+- (RYMBProgressHUDMode)mode {
 	return mode;
 }
 
@@ -176,7 +176,7 @@
 }
 
 - (void)updateProgress {
-    [(MBRoundProgressView *)indicator setProgress:progress];
+    [(RYMBRoundProgressView *)indicator setProgress:progress];
 }
 
 - (void)updateIndicators {
@@ -186,7 +186,7 @@
 	
     if (mode == MBProgressHUDModeDeterminate) {
 #if __has_feature(objc_arc)
-        self.indicator = [[MBRoundProgressView alloc] init];
+        self.indicator = [[RYMBRoundProgressView alloc] init];
 #else
         self.indicator = [[[MBRoundProgressView alloc] init] autorelease];
 #endif
@@ -219,8 +219,8 @@
 #pragma mark -
 #pragma mark Class methods
 
-+ (MBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
-	MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
++ (RYMBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
+	RYMBProgressHUD *hud = [[RYMBProgressHUD alloc] initWithView:view];
 	[view addSubview:hud];
 	[hud show:animated];
 #if __has_feature(objc_arc)
@@ -233,12 +233,12 @@
 + (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated {
 	UIView *viewToRemove = nil;
 	for (UIView *v in [view subviews]) {
-		if ([v isKindOfClass:[MBProgressHUD class]]) {
+		if ([v isKindOfClass:[RYMBProgressHUD class]]) {
 			viewToRemove = v;
 		}
 	}
 	if (viewToRemove != nil) {
-		MBProgressHUD *HUD = (MBProgressHUD *)viewToRemove;
+		RYMBProgressHUD *HUD = (RYMBProgressHUD *)viewToRemove;
 		HUD.removeFromSuperViewOnHide = YES;
 		[HUD hide:animated];
 		return YES;
@@ -758,7 +758,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-@implementation MBRoundProgressView
+@implementation RYMBRoundProgressView
 
 #pragma mark -
 #pragma mark Accessors

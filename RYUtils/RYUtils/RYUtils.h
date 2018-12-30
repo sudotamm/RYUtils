@@ -179,8 +179,10 @@
     - UIView动画加入过渡时间参数
     - CommonMethods加入字符合法验证方法
     - BaseModel加入Model转Dict方法
- v.4.4.0 2016-10-18
+ v4.4.0 2016-10-18
     - Copyright全部私有成Ryan
+ v5.0.0 2018-12-30
+    - 替换MBProgressHUD名称，解决项目duplicate MBHUD的问题
  */
 
 #ifndef RYUtils_RYUtils_h

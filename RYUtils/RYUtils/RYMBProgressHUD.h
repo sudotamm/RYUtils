@@ -28,7 +28,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MBProgressHUDDelegate;
+@protocol RYMBProgressHUDDelegate;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -39,14 +39,14 @@ typedef enum {
 	MBProgressHUDModeDeterminate,
 	/** Shows a custom view */
 	MBProgressHUDModeCustomView
-} MBProgressHUDMode;
+} RYMBProgressHUDMode;
 
 typedef enum {
     /** Opacity animation */
     MBProgressHUDAnimationFade,
     /** Opacity + scale animation */
     MBProgressHUDAnimationZoom
-} MBProgressHUDAnimation;
+} RYMBProgressHUDAnimation;
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -68,10 +68,10 @@ typedef enum {
  *   indicator view.
  * - If also the detailsLabelText property is set then another label is placed below the first label.
  */
-@interface MBProgressHUD : UIView {
+@interface RYMBProgressHUD : UIView {
 	
-	MBProgressHUDMode mode;
-    MBProgressHUDAnimation animationType;
+	RYMBProgressHUDMode mode;
+    RYMBProgressHUDAnimation animationType;
 	
 	SEL methodForExecution;
 	id targetForExecution;
@@ -105,9 +105,9 @@ typedef enum {
 	float progress;
 	
 #if __has_feature(objc_arc)
-	id<MBProgressHUDDelegate> __weak delegate;
+	id<RYMBProgressHUDDelegate> __weak delegate;
 #else
-	id<MBProgressHUDDelegate> delegate;
+	id<RYMBProgressHUDDelegate> delegate;
 #endif
     NSString *labelText;
 	NSString *detailsLabelText;
@@ -133,7 +133,7 @@ typedef enum {
  *
  * @see hideHUDForView:animated:
  */
-+ (MBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
++ (RYMBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
 
 /**
  * Finds a HUD subview and hides it. The counterpart to this method is showHUDAddedTo:animated:.
@@ -180,14 +180,14 @@ typedef enum {
  *
  * @see MBProgressHUDMode
  */
-@property (assign) MBProgressHUDMode mode;
+@property (assign) RYMBProgressHUDMode mode;
 
 /**
  * The animation type that should be used when the HUD is shown and hidden. 
  *
  * @see MBProgressHUDAnimation
  */
-@property (assign) MBProgressHUDAnimation animationType;
+@property (assign) RYMBProgressHUDAnimation animationType;
 
 /** 
  * The HUD delegate object. If set the delegate will receive hudWasHidden callbacks when the HUD was hidden. The
@@ -195,9 +195,9 @@ typedef enum {
  * object will not be retained.
  */
 #if __has_feature(objc_arc)
-@property (weak) id<MBProgressHUDDelegate> delegate;
+@property (weak) id<RYMBProgressHUDDelegate> delegate;
 #else
-@property (assign) id<MBProgressHUDDelegate> delegate;
+@property (assign) id<RYMBProgressHUDDelegate> delegate;
 #endif
 /** 
  * An optional short message to be displayed below the activity indicator. The HUD is automatically resized to fit
@@ -357,14 +357,14 @@ typedef enum {
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-@protocol MBProgressHUDDelegate <NSObject>
+@protocol RYMBProgressHUDDelegate <NSObject>
 
 @optional
 
 /** 
  * Called after the HUD was fully hidden from the screen. 
  */
-- (void)hudWasHidden:(MBProgressHUD *)hud;
+- (void)hudWasHidden:(RYMBProgressHUD *)hud;
 
 /**
  * @deprecated use hudWasHidden: instead
@@ -379,7 +379,7 @@ typedef enum {
 /**
  * A progress view for showing definite progress by filling up a circle (pie chart).
  */
-@interface MBRoundProgressView : UIView {
+@interface RYMBRoundProgressView : UIView {
 @private
     float _progress;
 }
