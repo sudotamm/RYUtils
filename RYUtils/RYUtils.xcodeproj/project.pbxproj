@@ -26,8 +26,8 @@
 		94452F2C1862CE8800EEB6D5 /* RYCycleScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 94452F2A1862CE8800EEB6D5 /* RYCycleScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94452F2D1862CE8800EEB6D5 /* RYCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94452F2B1862CE8800EEB6D5 /* RYCycleScrollView.m */; };
 		94487345171C057E00EB3569 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94487343171C057E00EB3569 /* InfoPlist.strings */; };
-		9448735C171C05DE00EB3569 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448734E171C05DD00EB3569 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (); }; };
-		9448735D171C05DE00EB3569 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448734F171C05DD00EB3569 /* MBProgressHUD.m */; };
+		9448735C171C05DE00EB3569 /* RYMBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448734E171C05DD00EB3569 /* RYMBProgressHUD.h */; settings = {ATTRIBUTES = (); }; };
+		9448735D171C05DE00EB3569 /* RYMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448734F171C05DD00EB3569 /* RYMBProgressHUD.m */; };
 		9448735E171C05DE00EB3569 /* NSDate+RYAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487350171C05DE00EB3569 /* NSDate+RYAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9448735F171C05DE00EB3569 /* NSDate+RYAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94487351171C05DE00EB3569 /* NSDate+RYAdditions.m */; };
 		94487360171C05DE00EB3569 /* UIView+RYUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94487352171C05DE00EB3569 /* UIView+RYUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,8 +82,8 @@
 		94487342171C057E00EB3569 /* RYUtils-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RYUtils-Info.plist"; sourceTree = "<group>"; };
 		94487344171C057E00EB3569 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94487346171C057E00EB3569 /* RYUtils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RYUtils-Prefix.pch"; sourceTree = "<group>"; };
-		9448734E171C05DD00EB3569 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		9448734F171C05DD00EB3569 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9448734E171C05DD00EB3569 /* RYMBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYMBProgressHUD.h; sourceTree = "<group>"; };
+		9448734F171C05DD00EB3569 /* RYMBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYMBProgressHUD.m; sourceTree = "<group>"; };
 		94487350171C05DE00EB3569 /* NSDate+RYAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RYAdditions.h"; sourceTree = "<group>"; };
 		94487351171C05DE00EB3569 /* NSDate+RYAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RYAdditions.m"; sourceTree = "<group>"; };
 		94487352171C05DE00EB3569 /* UIView+RYUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RYUtilities.h"; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 				940F773417866D5700212A27 /* RYDownloaderManager.m */,
 				944A84AF1744C55C00D9DF9D /* RYHUDManager.h */,
 				944A84B01744C55C00D9DF9D /* RYHUDManager.m */,
-				9448734E171C05DD00EB3569 /* MBProgressHUD.h */,
-				9448734F171C05DD00EB3569 /* MBProgressHUD.m */,
+				9448734E171C05DD00EB3569 /* RYMBProgressHUD.h */,
+				9448734F171C05DD00EB3569 /* RYMBProgressHUD.m */,
 				943B05241936FB0A00551AF4 /* NSObject+RYPropertyList.h */,
 				943B05251936FB0A00551AF4 /* NSObject+RYPropertyList.m */,
 				94487354171C05DE00EB3569 /* RYAsynImageView.h */,
@@ -234,7 +234,7 @@
 				94452F281862CE7000EEB6D5 /* RYCommonMethods.h in Headers */,
 				94FA513617CC3FF40030C8C0 /* RYReverseLocation.h in Headers */,
 				944A84B11744C55C00D9DF9D /* RYHUDManager.h in Headers */,
-				9448735C171C05DE00EB3569 /* MBProgressHUD.h in Headers */,
+				9448735C171C05DE00EB3569 /* RYMBProgressHUD.h in Headers */,
 				948142911BEB501A00AFF2FF /* UIImage+RYImageEffects.h in Headers */,
 				9438D1E4184323A500B3BC61 /* NSArray+RYLocationTransform.h in Headers */,
 				94487364171C05DE00EB3569 /* RYImageDownloader.h in Headers */,
@@ -307,7 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9448735D171C05DE00EB3569 /* MBProgressHUD.m in Sources */,
+				9448735D171C05DE00EB3569 /* RYMBProgressHUD.m in Sources */,
 				9448735F171C05DE00EB3569 /* NSDate+RYAdditions.m in Sources */,
 				94487361171C05DE00EB3569 /* UIView+RYUtilities.m in Sources */,
 				94E8811C18E40222003EB0C2 /* UIImage+RYUtilities.m in Sources */,

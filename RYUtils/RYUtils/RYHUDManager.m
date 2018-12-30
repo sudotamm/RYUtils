@@ -7,7 +7,7 @@
 //
 
 #import "RYHUDManager.h"
-#import "MBProgressHUD.h"
+#import "RYMBProgressHUD.h"
 
 @implementation RYHUDManager
 
@@ -24,7 +24,7 @@
         UIWindow *hudWindow = [[UIApplication sharedApplication].windows objectAtIndex:0];
         //        }
         
-        hud = [[MBProgressHUD alloc] initWithWindow:hudWindow];
+        hud = [[RYMBProgressHUD alloc] initWithWindow:hudWindow];
         [hudWindow addSubview:hud];
         hud.userInteractionEnabled = NO;
     }
